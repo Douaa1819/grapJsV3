@@ -16,79 +16,82 @@
   </style>
 </head>
 <body>
-<style>
-  @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap');
+<div id="gjs">
+  <header class="header">
+    <div class="container">
+      <div class="logo"><i class="fas fa-brain"></i></div>
+      <div class="badge">Confidentiel</div>
+    </div>
+  </header>
+  <section class="hero-grid">
+    <div class="container">
+      <div class="left-column">
+        <h1>Plan d’Adoption <span class="accent">Numérique</span></h1>
+        <p class="baseline">Transformation digitale intelligente propulsée par l’IA</p>
+        <p class="company-name">Capegemmini</p>
+      </div>
+      <div class="right-column">
+        <div class="orb"></div>
+      </div>
+    </div>
+  </section>
+</div>
 
-  #gjs {
+<style>
+  .container {
     max-width: 1440px;
     padding: 40px;
     margin: auto;
-    font-family: 'Inter', sans-serif;
-    color: #2c2c2c;
-    background-color: #ffffff;
   }
-
   .header {
     position: sticky;
     top: 0;
+    background: #ffffff;
+    color: #2c2c2c;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
     display: flex;
     justify-content: space-between;
     align-items: center;
-    background: #ffffff;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-    padding: 10px 20px;
-    z-index: 1000;
+    padding: 10px 0;
   }
-
-  .logo {
+  .logo i {
     font-size: 24px;
-    color: #2c2c2c;
   }
-
   .badge {
-    background-color: #92b9e8;
+    background: #92b9e8;
     color: #ffffff;
     padding: 5px 10px;
     border-radius: 5px;
-    font-size: 14px;
   }
-
   .hero-grid {
     display: grid;
     grid-template-columns: 1fr 1fr;
-    align-items: center;
     gap: 40px;
-    margin-top: 40px;
+    align-items: center;
+    padding: 40px 0;
   }
-
-  .hero-grid h1 {
+  .hero-grid .left-column h1 {
     font-size: 2.5em;
-    margin-bottom: 10px;
+    color: #2c2c2c;
   }
-
-  .hero-grid .accent {
+  .hero-grid .left-column .accent {
     color: #92b9e8;
   }
-
-  .hero-grid .baseline {
-    font-size: 1.25em;
-    margin-bottom: 20px;
+  .hero-grid .left-column .baseline {
+    font-size: 1.2em;
+    margin: 20px 0;
   }
-
-  .hero-grid .company-name {
+  .hero-grid .left-column .company-name {
     font-size: 1em;
-    font-weight: bold;
+    color: #2c2c2c;
   }
-
-  .orb {
-    background: radial-gradient(circle, #92b9e8, #ffffff);
+  .right-column .orb {
     width: 150px;
     height: 150px;
+    background: linear-gradient(135deg, #92b9e8, #ffffff);
     border-radius: 50%;
-    animation: pulsate 3s infinite;
-    margin: auto;
+    animation: pulsate 2s infinite;
   }
-
   @keyframes pulsate {
     0%, 100% {
       transform: scale(1);
@@ -96,82 +99,61 @@
     }
     50% {
       transform: scale(1.05);
-      opacity: 0.9;
+      opacity: 0.95;
     }
   }
-
   @media (max-width: 768px) {
     .hero-grid {
       grid-template-columns: 1fr;
       text-align: center;
     }
-    .orb {
-      margin-top: 20px;
+    .right-column {
+      margin: auto;
     }
   }
 </style>
-
-<div id="gjs">
-  <header class="header">
-    <div class="logo"><i class='fas fa-brain'></i></div>
-    <div class="badge">Confidentiel</div>
-  </header>
-  <section class="hero-grid">
-    <div>
-      <h1>Plan d’Adoption <span class="accent">Numérique</span></h1>
-      <p class="baseline">Transformation digitale intelligente propulsée par l’IA</p>
-      <p class="company-name">Capegemmini</p>
-    </div>
-    <div>
-      <div class="orb"></div>
-    </div>
-  </section>
-</div>
 <div id="gjs" class="container">
-  <section>
+  <section class="info-grid">
     <h2>Analyse de l’entreprise</h2>
-    <div class="info-grid">
-      <div class="info-block">
-        <h3>État</h3>
-        <p style="max-width: 800px;">undefined</p>
-      </div>
-      <div class="info-block">
-        <h3>Secteur</h3>
-        <p style="max-width: 800px;">IT</p>
-      </div>
-      <div class="info-block">
-        <h3>Positionnement</h3>
-        <p style="max-width: 800px;">Capegemmini se positionne comme un partenaire stratégique pour les PME cherchant à adopter des solutions digitales simples et efficaces, avec un accent sur l'accessibilité et l'innovation.</p>
-      </div>
-      <div class="info-block">
-        <h3>Enjeux</h3>
-        <p style="max-width: 800px;">Améliorer la visibilité en ligne, optimiser les processus internes, consolider la croissance tout en maintenant une équipe engagée, et digitaliser rapidement l'offre pour rester compétitif.</p>
-      </div>
-      <div class="info-block">
-        <h3>Besoins</h3>
-        <p style="max-width: 800px;">Besoin de compétences techniques supplémentaires, d'une meilleure gestion du temps, d'une stratégie numérique claire, et d'outils intégrés pour éviter les silos d'information.</p>
-      </div>
+    <div class="info-block">
+      <h3>État</h3>
+      <p>undefined</p>
+    </div>
+    <div class="info-block">
+      <h3>Secteur</h3>
+      <p>IT</p>
+    </div>
+    <div class="info-block">
+      <h3>Positionnement</h3>
+      <p>Capegemmini se positionne comme un partenaire stratégique pour les PME cherchant à adopter des solutions digitales simples et efficaces, avec un accent sur l'accessibilité et l'innovation.</p>
+    </div>
+    <div class="info-block">
+      <h3>Enjeux</h3>
+      <p>Améliorer la visibilité en ligne, optimiser les processus internes, consolider la croissance tout en maintenant une équipe engagée, et digitaliser rapidement l'offre pour rester compétitif.</p>
+    </div>
+    <div class="info-block">
+      <h3>Besoins</h3>
+      <p>Besoin de compétences techniques supplémentaires, d'une meilleure gestion du temps, d'une stratégie numérique claire, et d'outils intégrés pour éviter les silos d'information.</p>
     </div>
   </section>
-  <section>
+  
+  <section class="info-grid">
     <h2>Vision stratégique</h2>
-    <div class="info-grid">
-      <div class="info-block">
-        <h3>Mission</h3>
-        <p style="max-width: 800px;">undefined</p>
-      </div>
-      <div class="info-block">
-        <h3>Vision</h3>
-        <p style="max-width: 800px;">undefined</p>
-      </div>
-      <div class="info-block">
-        <h3>Signature</h3>
-        <p style="max-width: 800px;">undefined</p>
-      </div>
-      <div class="info-block">
-        <h3>Objectifs</h3>
-        <p style="max-width: 800px;">undefined</p>
-      </div>
+    <div class="info-block">
+      <h3>Mission</h3>
+      <p>undefined</p>
+    </div>
+    <div class="info-block">
+      <h3>Vision</h3>
+      <p>undefined</p>
+    </div>
+    <div class="info-block">
+      <h3>Signature</h3>
+      <p>undefined</p>
+    </div>
+    <div class="info-block">
+      <h3>Objectifs</h3>
+      <p>undefined</p>
     </div>
   </section>
 </div>
@@ -182,182 +164,189 @@
     flex-direction: column;
     gap: 20px;
     padding: 20px;
+    max-width: 100%;
+    box-sizing: border-box;
   }
   .info-grid {
     display: flex;
-    flex-direction: column;
-    gap: 15px;
+    flex-wrap: wrap;
+    gap: 20px;
   }
   .info-block {
-    display: flex;
-    flex-direction: column;
+    flex: 1 1 100%;
+    max-width: 800px;
   }
-  @media (min-width: 600px) {
-    .info-grid {
-      flex-direction: row;
-      flex-wrap: wrap;
-    }
+  h2 {
+    font-size: 1.5em;
+    margin-bottom: 10px;
+  }
+  h3 {
+    font-size: 1.2em;
+    margin-bottom: 5px;
+  }
+  p {
+    font-size: 1em;
+    line-height: 1.5;
+    max-width: 800px;
+  }
+  @media (min-width: 768px) {
     .info-block {
-      flex: 1 1 calc(50% - 10px);
-      box-sizing: border-box;
+      flex: 1 1 calc(50% - 20px);
     }
   }
 </style>
 <div id="gjs">
-  <h2>Analyse SWOT</h2>
-  <div class="swot-grid">
-    <div class="swot-card positive">
-      <h3>Forces</h3>
-      <ul>
-        <li>Flexibilité de l'environnement de travail</li>
-        <li>Écoute attentive des besoins des clients</li>
-        <li>Réactivité</li>
-        <li>Capacité à proposer des solutions simples et adaptées</li>
-      </ul>
+    <h2>Analyse SWOT</h2>
+    <div class="swot-grid">
+        <div class="swot-card positive fadeIn">
+            <h3>Forces</h3>
+            <ul>
+                <li>Flexibilité de l'environnement de travail</li>
+                <li>Écoute attentive des besoins des clients</li>
+                <li>Réactivité</li>
+                <li>Capacité à proposer des solutions simples et adaptées</li>
+            </ul>
+        </div>
+        <div class="swot-card negative fadeIn">
+            <h3>Faiblesses</h3>
+            <ul>
+                <li>Manque de ressources techniques en interne</li>
+                <li>Absence d'une stratégie numérique claire</li>
+                <li>Outils fonctionnant en silo</li>
+                <li>Processus majoritairement informels sans documentation structurée</li>
+            </ul>
+        </div>
+        <div class="swot-card positive fadeIn">
+            <h3>Opportunités</h3>
+            <p>À définir</p>
+        </div>
+        <div class="swot-card negative fadeIn">
+            <h3>Menaces</h3>
+            <ul>
+                <li>La concurrence accrue avec des entreprises ayant une meilleure visibilité en ligne et des offres plus claires</li>
+                <li>Risque de non-conformité aux réglementations de protection des données</li>
+            </ul>
+        </div>
     </div>
-    <div class="swot-card negative">
-      <h3>Faiblesses</h3>
-      <ul>
-        <li>Manque de ressources techniques en interne</li>
-        <li>Absence d'une stratégie numérique claire</li>
-        <li>Outils fonctionnant en silo</li>
-        <li>Processus majoritairement informels sans documentation structurée</li>
-      </ul>
-    </div>
-    <div class="swot-card positive">
-      <h3>Opportunités</h3>
-      <p>undefined</p>
-    </div>
-    <div class="swot-card negative">
-      <h3>Menaces</h3>
-      <ul>
-        <li>Concurrence accrue avec des entreprises ayant une meilleure visibilité en ligne et des offres plus claires</li>
-        <li>Risque de non-conformité aux réglementations de protection des données</li>
-      </ul>
-    </div>
-  </div>
 </div>
 
 <style>
-  #gjs {
-    max-width: 800px;
-    margin: 0 auto;
-    padding: 20px;
-    box-sizing: border-box;
-  }
-
-  h2 {
-    text-align: center;
-    margin-bottom: 20px;
-  }
-
-  .swot-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-    gap: 20px;
-  }
-
-  .swot-card {
-    background-color: #f9f9f9;
-    border-radius: 8px;
-    padding: 15px;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-    transition: transform 0.3s ease;
-  }
-
-  .swot-card:hover {
-    transform: translateY(-5px);
-  }
-
-  .positive {
-    border: 2px solid #92b9e8;
-  }
-
-  .negative {
-    background-color: #e0e0e0;
-  }
-
-  h3 {
-    margin-top: 0;
-    font-size: 1.2em;
-  }
-
-  ul {
-    list-style-type: none;
-    padding-left: 0;
-  }
-
-  ul li {
-    margin-bottom: 5px;
-  }
-
-  @media (max-width: 600px) {
-    .swot-grid {
-      grid-template-columns: 1fr;
+    #gjs {
+        max-width: 100%;
+        padding: 20px;
+        box-sizing: border-box;
     }
-  }
+
+    h2 {
+        text-align: center;
+        margin-bottom: 20px;
+    }
+
+    .swot-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+        gap: 20px;
+    }
+
+    .swot-card {
+        padding: 20px;
+        background-color: #f9f9f9;
+        border-radius: 8px;
+        border: 1px solid #ddd;
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        transition: transform 0.3s ease-in-out;
+    }
+
+    .swot-card h3 {
+        margin-top: 0;
+        margin-bottom: 10px;
+    }
+
+    .swot-card ul {
+        padding-left: 20px;
+        margin: 0;
+    }
+
+    .swot-card.positive {
+        border-color: #92b9e8;
+    }
+
+    .swot-card.negative {
+        background-color: #f0f0f0;
+    }
+
+    .fadeIn {
+        animation: fadeIn 1s ease-in-out;
+    }
+
+    @keyframes fadeIn {
+        from {
+            opacity: 0;
+            transform: translateY(20px);
+        }
+        to {
+            opacity: 1;
+            transform: translateY(0);
+        }
+    }
 </style>
-<section class="recommendations-personas">
-  <div class="recommendations">
-    <h2>Plan d’action recommandé</h2>
-    <ul>
-      <li class="recommendation-item"><i class='fas fa-check'></i> Investir dans la formation continue des employés via une plateforme LMS</li>
-      <li class="recommendation-item"><i class='fas fa-check'></i> Adopter un CRM intégré pour une gestion efficace des clients</li>
-      <li class="recommendation-item"><i class='fas fa-check'></i> Mettre en place une politique de cybersécurité formalisée</li>
-      <li class="recommendation-item"><i class='fas fa-check'></i> Structurer les processus internes avec des outils collaboratifs comme Asana ou Monday.com.</li>
-    </ul>
-  </div>
-  <div class="personas">
-    <h2>Profils clients types</h2>
-    <div class="personas-grid">
-      <div class="persona-card">
-        <h3><i class='fas fa-user'></i> Nom: Jean Dupont, Rôle: Responsable Marketing</h3>
-        <p><strong>Besoins:</strong> Optimiser la stratégie digitale.</p>
-        <p><strong>Douleurs:</strong> Manque de visibilité sur les performances des campagnes.</p>
-        <p><strong>Objectifs:</strong> Augmenter le ROI des actions marketing.</p>
-        <p><strong>Comportements:</strong> Utilise fréquemment des outils d'analyse.</p>
-      </div>
-      <div class="persona-card">
-        <h3><i class='fas fa-user'></i> Nom: Marie Durand, Rôle: Responsable RH</h3>
-        <p><strong>Besoins:</strong> Améliorer la satisfaction des employés.</p>
-        <p><strong>Douleurs:</strong> Difficultés à recruter des talents.</p>
-        <p><strong>Objectifs:</strong> Réduire le turnover.</p>
-        <p><strong>Comportements:</strong> Fait régulièrement des sondages internes.</p>
-      </div>
+<section class="recommendations">
+  <h2>Plan d’action recommandé</h2>
+  <ul>
+    <li class="recommendation-item"><i class='fas fa-check'></i> Investir dans la formation continue des employés via une plateforme LMS</li>
+    <li class="recommendation-item"><i class='fas fa-check'></i> Adopter un CRM intégré pour une gestion efficace des clients</li>
+    <li class="recommendation-item"><i class='fas fa-check'></i> Mettre en place une politique de cybersécurité formalisée</li>
+    <li class="recommendation-item"><i class='fas fa-check'></i> Structurer les processus internes avec des outils collaboratifs comme Asana ou Monday.com.</li>
+  </ul>
+</section>
+
+<section class="personas">
+  <h2>Profils clients types</h2>
+  <div class="personas-grid">
+    <div class="persona-card">
+      <h3><i class='fas fa-user'></i> Nom du Persona 1, Rôle</h3>
+      <p><strong>Besoins:</strong> Description des besoins.</p>
+      <p><strong>Douleurs:</strong> Description des douleurs.</p>
+      <p><strong>Objectifs:</strong> Description des objectifs.</p>
+      <p><strong>Comportements:</strong> Description des comportements.</p>
+    </div>
+    <div class="persona-card">
+      <h3><i class='fas fa-user'></i> Nom du Persona 2, Rôle</h3>
+      <p><strong>Besoins:</strong> Description des besoins.</p>
+      <p><strong>Douleurs:</strong> Description des douleurs.</p>
+      <p><strong>Objectifs:</strong> Description des objectifs.</p>
+      <p><strong>Comportements:</strong> Description des comportements.</p>
     </div>
   </div>
 </section>
 
 <style>
-  .recommendations-personas {
+  body {
     font-family: Arial, sans-serif;
-    max-width: 1200px;
-    margin: 0 auto;
+    line-height: 1.6;
+    color: #333;
+    margin: 0;
     padding: 20px;
   }
 
   h2 {
     font-size: 24px;
     margin-bottom: 20px;
-    color: #333;
   }
 
-  ul {
+  .recommendations ul {
     list-style: none;
     padding: 0;
   }
 
   .recommendation-item {
-    font-size: 16px;
     margin-bottom: 10px;
-    color: #555;
-    display: flex;
-    align-items: center;
+    font-size: 18px;
   }
 
   .recommendation-item i {
-    margin-right: 10px;
-    color: #27ae60;
+    color: #28a745;
+    margin-right: 8px;
   }
 
   .personas-grid {
@@ -367,27 +356,25 @@
   }
 
   .persona-card {
-    background-color: #f9f9f9;
-    padding: 20px;
+    border: 1px solid #ddd;
+    padding: 15px;
     border-radius: 8px;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    background-color: #f9f9f9;
   }
 
   .persona-card h3 {
-    font-size: 18px;
+    font-size: 20px;
     margin-bottom: 10px;
-    color: #333;
   }
 
   .persona-card p {
-    font-size: 14px;
     margin-bottom: 10px;
-    color: #666;
+    font-size: 16px;
   }
 
   .persona-card i {
+    color: #007bff;
     margin-right: 5px;
-    color: #3498db;
   }
 </style>
 <!DOCTYPE html>
@@ -409,56 +396,58 @@
         .web-analysis-grid div {
             background-color: #f9f9f9;
             border-radius: 8px;
-            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
             padding: 20px;
         }
         .conclusion {
             padding: 20px;
-            animation: fadeIn 1s ease-in-out;
-        }
-        .footer {
-            background-color: #333;
-            color: #fff;
-            text-align: center;
-            padding: 20px 0;
+            animation: fadeIn 1s ease-out;
         }
         @keyframes fadeIn {
             from { opacity: 0; }
             to { opacity: 1; }
         }
+        .footer {
+            background-color: #333;
+            color: white;
+            text-align: center;
+            padding: 20px 0;
+        }
     </style>
 </head>
 <body>
-    <section>
-        <h2>Analyse Web</h2>
-        <div class="web-analysis-grid">
-            <div>
-                <h3>SEO</h3>
-                <p>Contenu non précisé.</p>
-            </div>
-            <div>
-                <h3>UX</h3>
-                <p>Contenu non précisé.</p>
-            </div>
-            <div>
-                <h3>Performance</h3>
-                <p>Contenu non précisé.</p>
-            </div>
-            <div>
-                <h3>Technologies</h3>
-                <p>Contenu non précisé.</p>
-            </div>
+
+<section>
+    <h2>Analyse Web</h2>
+    <div class="web-analysis-grid">
+        <div>
+            <h3>SEO</h3>
+            <p>Optimisation des moteurs de recherche pour une meilleure visibilité.</p>
         </div>
-    </section>
+        <div>
+            <h3>UX</h3>
+            <p>Amélioration de l'expérience utilisateur pour une navigation intuitive.</p>
+        </div>
+        <div>
+            <h3>Performance</h3>
+            <p>Analyse des temps de chargement et de la réactivité du site.</p>
+        </div>
+        <div>
+            <h3>Technologies</h3>
+            <p>Évaluation des outils et technologies utilisés.</p>
+        </div>
+    </div>
+</section>
 
-    <section>
-        <h2>Synthèse</h2>
-        <p class="conclusion">Pour réussir sa transformation numérique, Capegemmini doit structurer ses processus internes, investir dans des outils intégrés, et renforcer ses compétences techniques. En adoptant une approche progressive et en impliquant l'équipe à chaque étape, l'entreprise pourra consolider sa position sur le marché et atteindre ses objectifs de croissance.</p>
-    </section>
+<section>
+    <h2>Synthèse</h2>
+    <p class="conclusion">Pour réussir sa transformation numérique, Capegemmini doit structurer ses processus internes, investir dans des outils intégrés, et renforcer ses compétences techniques. En adoptant une approche progressive et en impliquant l'équipe à chaque étape, l'entreprise pourra consolider sa position sur le marché et atteindre ses objectifs de croissance.</p>
+</section>
 
-    <footer class="footer">
-        © 2025 - Capegemmini
-    </footer>
+<footer class="footer">
+    © 2025 - Capegemmini
+</footer>
+
 </body>
 </html>
 </body>
