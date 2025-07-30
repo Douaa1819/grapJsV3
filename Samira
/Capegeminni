@@ -16,23 +16,14 @@
   </style>
 </head>
 <body>
-<div id="gjs" class="container">
-  <header class="header">
-    <div class="logo"><i class="fas fa-brain"></i></div>
-    <div class="badge">Confidentiel</div>
-  </header>
-  <section class="hero-grid">
-    <div class="hero-content">
-      <h1>Plan d’Adoption <span class="accent">Numérique</span></h1>
-      <p class="baseline">Transformation digitale intelligente propulsée par l’IA</p>
-      <p class="company-name">undefined</p>
-    </div>
-    <div class="orb"></div>
-  </section>
-</div>
-
 <style>
-  @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap');
+  body {
+    font-family: 'Inter', sans-serif;
+    color: #2c2c2c;
+    margin: 0;
+    padding: 0;
+    background-color: #ffffff;
+  }
 
   .container {
     max-width: 1440px;
@@ -43,14 +34,12 @@
   .header {
     position: sticky;
     top: 0;
+    background-color: #ffffff;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
     display: flex;
     justify-content: space-between;
     align-items: center;
-    background-color: #ffffff;
-    color: #2c2c2c;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
     padding: 10px 20px;
-    z-index: 1000;
   }
 
   .logo i {
@@ -62,179 +51,174 @@
     color: #ffffff;
     padding: 5px 10px;
     border-radius: 5px;
+    font-size: 14px;
   }
 
   .hero-grid {
     display: grid;
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: repeat(2, 1fr);
     gap: 40px;
     align-items: center;
     margin-top: 40px;
   }
 
-  .hero-content h1 {
-    font-family: 'Inter', sans-serif;
-    font-size: 2.5em;
-    margin-bottom: 20px;
+  .hero-grid h1 {
+    font-size: 3em;
+    margin: 0 0 20px 0;
   }
 
-  .hero-content .accent {
+  .hero-grid h1 .accent {
     color: #92b9e8;
   }
 
   .baseline {
-    font-size: 1.25em;
-    margin-bottom: 10px;
+    font-size: 1.2em;
+    margin: 0 0 10px 0;
   }
 
   .company-name {
     font-size: 1em;
-    color: #aaa;
+    margin: 0;
   }
 
   .orb {
-    width: 150px;
-    height: 150px;
+    width: 200px;
+    height: 200px;
     background: radial-gradient(circle, #92b9e8, #ffffff);
     border-radius: 50%;
-    animation: pulsate 3s infinite;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    animation: pulsate 3s ease-in-out infinite;
   }
 
   @keyframes pulsate {
     0%, 100% {
       transform: scale(1);
-      opacity: 1;
     }
     50% {
       transform: scale(1.05);
-      opacity: 0.9;
     }
   }
 
   @media (max-width: 768px) {
     .hero-grid {
       grid-template-columns: 1fr;
-      text-align: center;
-    }
-
-    .orb {
-      margin: auto;
     }
   }
 </style>
+
 <div id="gjs" class="container">
-  <section class="info-block">
-    <h2>Analyse de l'entreprise</h2>
-    <div class="info-grid">
-      <div class="info-item">
-        <h3>État</h3>
-        <p style="max-width: 800px;">undefined</p>
-      </div>
-      <div class="info-item">
-        <h3>Secteur</h3>
-        <p style="max-width: 800px;">undefined</p>
-      </div>
-      <div class="info-item">
-        <h3>Positionnement</h3>
-        <p style="max-width: 800px;">undefined</p>
-      </div>
-      <div class="info-item">
-        <h3>Enjeux</h3>
-        <p style="max-width: 800px;">undefined</p>
-      </div>
-      <div class="info-item">
-        <h3>Besoins</h3>
-        <p style="max-width: 800px;">undefined</p>
-      </div>
+  <header class="header">
+    <div class="logo"><i class='fas fa-brain'></i></div>
+    <div class="badge">Confidentiel</div>
+  </header>
+  <section class="hero-grid">
+    <div>
+      <h1>Plan d’Adoption <span class="accent">Numérique</span></h1>
+      <p class="baseline">Transformation digitale intelligente propulsée par l’IA</p>
+      <p class="company-name">undefined</p>
     </div>
+    <div class="orb"></div>
   </section>
-  <section class="info-block">
-    <h2>Vision stratégique</h2>
-    <div class="info-grid">
-      <div class="info-item">
-        <h3>Mission</h3>
-        <p style="max-width: 800px;">undefined</p>
-      </div>
-      <div class="info-item">
-        <h3>Vision</h3>
-        <p style="max-width: 800px;">undefined</p>
-      </div>
-      <div class="info-item">
-        <h3>Signature</h3>
-        <p style="max-width: 800px;">undefined</p>
-      </div>
-      <div class="info-item">
-        <h3>Objectifs</h3>
-        <p style="max-width: 800px;">undefined</p>
-      </div>
-    </div>
-  </section>
+</div>
+<div id="gjs" class="container">
+    <section class="info-section">
+        <h2>Analyse de l’entreprise</h2>
+        <div class="info-grid">
+            <div class="info-block">
+                <h3>État</h3>
+                <p>undefined</p>
+            </div>
+            <div class="info-block">
+                <h3>Secteur</h3>
+                <p>undefined</p>
+            </div>
+            <div class="info-block">
+                <h3>Positionnement</h3>
+                <p>undefined</p>
+            </div>
+            <div class="info-block">
+                <h3>Enjeux</h3>
+                <p>undefined</p>
+            </div>
+            <div class="info-block">
+                <h3>Besoins</h3>
+                <p>undefined</p>
+            </div>
+        </div>
+    </section>
+    <section class="info-section">
+        <h2>Vision stratégique</h2>
+        <div class="info-grid">
+            <div class="info-block">
+                <h3>Mission</h3>
+                <p>undefined</p>
+            </div>
+            <div class="info-block">
+                <h3>Vision</h3>
+                <p>undefined</p>
+            </div>
+            <div class="info-block">
+                <h3>Signature</h3>
+                <p>undefined</p>
+            </div>
+            <div class="info-block">
+                <h3>Objectifs</h3>
+                <p>undefined</p>
+            </div>
+        </div>
+    </section>
 </div>
 
 <style>
-  .container {
-    display: flex;
-    flex-direction: column;
-    gap: 20px;
-    padding: 20px;
-  }
-
-  .info-block {
-    display: flex;
-    flex-direction: column;
-    gap: 10px;
-  }
-
-  .info-grid {
-    display: grid;
-    grid-template-columns: 1fr;
-    gap: 15px;
-  }
-
-  .info-item {
-    display: flex;
-    flex-direction: column;
-    gap: 5px;
-  }
-
-  @media (min-width: 600px) {
+    #gjs {
+        font-family: Arial, sans-serif;
+        padding: 20px;
+    }
+    .info-section {
+        margin-bottom: 40px;
+    }
     .info-grid {
-      grid-template-columns: 1fr 1fr;
+        display: flex;
+        flex-wrap: wrap;
+        gap: 20px;
     }
-  }
-
-  @media (min-width: 900px) {
-    .container {
-      max-width: 1000px;
-      margin: 0 auto;
+    .info-block {
+        flex: 1 1 calc(50% - 20px);
+        max-width: calc(50% - 20px);
     }
-  }
-
-  h2, h3 {
-    margin: 0;
-    font-weight: bold;
-  }
-
-  p {
-    margin: 0;
-  }
+    .info-block h3 {
+        margin-bottom: 10px;
+        font-size: 1.2em;
+    }
+    .info-block p {
+        max-width: 800px;
+        line-height: 1.5;
+    }
+    @media (max-width: 600px) {
+        .info-block {
+            flex: 1 1 100%;
+            max-width: 100%;
+        }
+    }
 </style>
 <div id="gjs">
   <h2>Analyse SWOT</h2>
   <div class="swot-grid">
-    <div class="swot-card positive">
+    <div class="swot-card positive fadeIn">
       <h3>Forces</h3>
       <p>undefined</p>
     </div>
-    <div class="swot-card negative">
+    <div class="swot-card negative fadeIn">
       <h3>Faiblesses</h3>
       <p>undefined</p>
     </div>
-    <div class="swot-card positive">
+    <div class="swot-card positive fadeIn">
       <h3>Opportunités</h3>
       <p>undefined</p>
     </div>
-    <div class="swot-card negative">
+    <div class="swot-card negative fadeIn">
       <h3>Menaces</h3>
       <p>undefined</p>
     </div>
@@ -243,107 +227,103 @@
 
 <style>
   #gjs {
-    max-width: 800px;
-    margin: 0 auto;
     padding: 20px;
+    font-family: Arial, sans-serif;
   }
 
   .swot-grid {
     display: grid;
-    grid-template-columns: repeat(2, 1fr);
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
     gap: 20px;
   }
 
   .swot-card {
-    padding: 20px;
+    background-color: #f9f9f9;
+    border: 1px solid #ddd;
     border-radius: 8px;
+    padding: 15px;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
     transition: transform 0.3s ease-in-out;
-    background-color: #f9f9f9;
   }
 
-  .swot-card:hover {
-    transform: translateY(-5px);
+  .swot-card h3 {
+    margin-top: 0;
+    font-size: 1.2em;
+  }
+
+  .swot-card p {
+    margin: 0;
+    font-size: 1em;
   }
 
   .positive {
-    border: 2px solid #92b9e8;
+    border-color: #92b9e8;
   }
 
   .negative {
     background-color: #e0e0e0;
   }
 
-  h2 {
-    text-align: center;
-    margin-bottom: 40px;
-    font-size: 24px;
-    color: #333;
+  .fadeIn {
+    opacity: 0;
+    animation: fadeIn 1s forwards;
   }
 
-  h3 {
-    margin-top: 0;
-    font-size: 18px;
-    color: #333;
-  }
-
-  p {
-    margin: 10px 0 0;
-    font-size: 16px;
-    color: #555;
-  }
-
-  @media (max-width: 768px) {
-    .swot-grid {
-      grid-template-columns: 1fr;
+  @keyframes fadeIn {
+    to {
+      opacity: 1;
     }
   }
 </style>
 <!DOCTYPE html>
-<html lang="en">
+<html lang="fr">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Recommandations et Personas</title>
     <style>
         body {
             font-family: Arial, sans-serif;
             line-height: 1.6;
-            margin: 20px;
+            margin: 0;
+            padding: 20px;
             color: #333;
+            box-sizing: border-box;
         }
         h2 {
+            font-size: 24px;
             margin-bottom: 20px;
-            font-size: 1.5em;
         }
         .recommendation-item {
-            padding: 10px 0;
+            margin-bottom: 10px;
             display: flex;
             align-items: center;
         }
         .recommendation-item i {
             margin-right: 10px;
-            color: #4CAF50;
+            color: #28a745;
         }
         .personas-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
             gap: 30px;
             margin-top: 20px;
         }
         .persona-card {
-            padding: 20px;
             border: 1px solid #ddd;
+            padding: 20px;
             border-radius: 5px;
             background-color: #f9f9f9;
         }
         .persona-card h3 {
-            margin-top: 0;
+            font-size: 20px;
+            margin-bottom: 10px;
             display: flex;
             align-items: center;
         }
-        .persona-card i {
+        .persona-card h3 i {
             margin-right: 10px;
-            color: #333;
+            color: #007bff;
         }
         .persona-card p {
             margin: 10px 0;
@@ -351,13 +331,12 @@
     </style>
 </head>
 <body>
-
     <section>
         <h2>Plan d’action recommandé</h2>
         <ul>
-            <li class="recommendation-item"><i class="fas fa-check"></i>Définir les objectifs</li>
-            <li class="recommendation-item"><i class="fas fa-check"></i>Analyser le public cible</li>
-            <li class="recommendation-item"><i class="fas fa-check"></i>Mettre en œuvre la stratégie</li>
+            <li class="recommendation-item"><i class='fas fa-check'></i>Première action recommandée</li>
+            <li class="recommendation-item"><i class='fas fa-check'></i>Deuxième action recommandée</li>
+            <li class="recommendation-item"><i class='fas fa-check'></i>Troisième action recommandée</li>
         </ul>
     </section>
 
@@ -365,22 +344,21 @@
         <h2>Profils clients types</h2>
         <div class="personas-grid">
             <div class="persona-card">
-                <h3><i class="fas fa-user"></i>Marie Dupont, Responsable Marketing</h3>
-                <p><strong>Besoins:</strong> Comprendre le marché.</p>
-                <p><strong>Douleurs:</strong> Manque de données analytiques.</p>
-                <p><strong>Objectifs:</strong> Augmenter la part de marché de 20%.</p>
-                <p><strong>Comportements:</strong> Utilise les réseaux sociaux pour suivre les tendances.</p>
+                <h3><i class='fas fa-user'></i>Nom du Client 1, Rôle</h3>
+                <p><strong>Besoins:</strong> Description des besoins.</p>
+                <p><strong>Douleurs:</strong> Description des douleurs.</p>
+                <p><strong>Objectifs:</strong> Description des objectifs.</p>
+                <p><strong>Comportements:</strong> Description des comportements.</p>
             </div>
             <div class="persona-card">
-                <h3><i class="fas fa-user"></i>Jean Martin, Développeur Web</h3>
-                <p><strong>Besoins:</strong> Technologies à jour.</p>
-                <p><strong>Douleurs:</strong> Temps limité pour les projets.</p>
-                <p><strong>Objectifs:</strong> Améliorer l'efficacité du code.</p>
-                <p><strong>Comportements:</strong> Participe à des forums spécialisés.</p>
+                <h3><i class='fas fa-user'></i>Nom du Client 2, Rôle</h3>
+                <p><strong>Besoins:</strong> Description des besoins.</p>
+                <p><strong>Douleurs:</strong> Description des douleurs.</p>
+                <p><strong>Objectifs:</strong> Description des objectifs.</p>
+                <p><strong>Comportements:</strong> Description des comportements.</p>
             </div>
         </div>
     </section>
-
 </body>
 </html>
 <!DOCTYPE html>
@@ -388,66 +366,72 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
     <style>
         body {
             margin: 0;
             font-family: Arial, sans-serif;
         }
+        .web-analysis {
+            padding: 20px;
+        }
         .web-analysis-grid {
             display: grid;
-            grid-template-columns: 1fr 1fr;
+            grid-template-columns: repeat(2, 1fr);
             gap: 20px;
-            padding: 20px;
         }
         .web-analysis-grid div {
             background-color: #f9f9f9;
             border-radius: 8px;
-            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
             padding: 20px;
         }
-        .fadeIn {
-            animation: fadeInAnimation 2s ease-in;
+        .web-analysis-grid h3 {
+            margin-top: 0;
         }
-        @keyframes fadeInAnimation {
-            from { opacity: 0; }
-            to { opacity: 1; }
+        .conclusion {
+            opacity: 0;
+            animation: fadeIn 2s forwards;
+        }
+        @keyframes fadeIn {
+            to {
+                opacity: 1;
+            }
         }
         .footer {
             background-color: #333;
             color: #fff;
             text-align: center;
-            padding: 20px 0;
+            padding: 15px 0;
         }
     </style>
 </head>
 <body>
 
-    <section>
+    <section class="web-analysis">
         <h2>Analyse Web</h2>
         <div class="web-analysis-grid">
             <div>
                 <h3>SEO</h3>
-                <p>Non précisé</p>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
             </div>
             <div>
                 <h3>UX</h3>
-                <p>Non précisé</p>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
             </div>
             <div>
                 <h3>Performance</h3>
-                <p>Non précisé</p>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
             </div>
             <div>
                 <h3>Technologies</h3>
-                <p>Non précisé</p>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
             </div>
         </div>
     </section>
 
-    <section>
+    <section class="conclusion">
         <h2>Synthèse</h2>
-        <p class="conclusion fadeIn">undefined</p>
+        <p class="conclusion">undefined</p>
     </section>
 
     <footer class="footer">
