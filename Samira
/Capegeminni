@@ -1,0 +1,463 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Plan d'Adoption Numérique</title>
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      font-family: 'Inter', sans-serif;
+      background-color: #fff;
+    }
+  </style>
+</head>
+<body>
+<div id="gjs" class="container">
+  <header class="header">
+    <div class="logo">
+      <i class='fas fa-brain'></i>
+    </div>
+    <div class="badge">Confidentiel</div>
+  </header>
+  <section class="hero-grid">
+    <div class="hero-left">
+      <h1>Plan d’Adoption <span class="accent">Numérique</span></h1>
+      <p class="baseline">Transformation digitale intelligente propulsée par l’IA</p>
+      <p class="company-name">undefined</p>
+    </div>
+    <div class="hero-right">
+      <div class="orb"></div>
+    </div>
+  </section>
+</div>
+
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap');
+
+  .container {
+    max-width: 1440px;
+    padding: 40px;
+    margin: auto;
+    font-family: 'Inter', sans-serif;
+  }
+
+  .header {
+    position: sticky;
+    top: 0;
+    background-color: #ffffff;
+    color: #2c2c2c;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    z-index: 1000;
+  }
+
+  .logo i {
+    font-size: 24px;
+  }
+
+  .badge {
+    background-color: #92b9e8;
+    color: #ffffff;
+    padding: 5px 10px;
+    border-radius: 5px;
+  }
+
+  .hero-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 40px;
+    align-items: center;
+    margin-top: 40px;
+  }
+
+  .hero-left h1 {
+    font-size: 2.5em;
+    margin-bottom: 20px;
+  }
+
+  .hero-left .accent {
+    color: #92b9e8;
+  }
+
+  .baseline {
+    margin-bottom: 15px;
+    font-size: 1.2em;
+  }
+
+  .company-name {
+    font-size: 1em;
+    color: #2c2c2c;
+  }
+
+  .hero-right .orb {
+    width: 150px;
+    height: 150px;
+    background: radial-gradient(circle, #92b9e8, #ffffff);
+    border-radius: 50%;
+    animation: pulsate 3s infinite;
+  }
+
+  @keyframes pulsate {
+    0%, 100% {
+      transform: scale(1);
+      opacity: 1;
+    }
+    50% {
+      transform: scale(1.05);
+      opacity: 0.95;
+    }
+  }
+
+  @media (max-width: 768px) {
+    .hero-grid {
+      grid-template-columns: 1fr;
+    }
+  }
+</style>
+<div id="gjs" class="container">
+  <section class="analysis-section">
+    <h2>Analyse de l'entreprise</h2>
+    <div class="info-grid">
+      <div class="info-block">
+        <h3>État</h3>
+        <p>undefined</p>
+      </div>
+      <div class="info-block">
+        <h3>Secteur</h3>
+        <p>undefined</p>
+      </div>
+      <div class="info-block">
+        <h3>Positionnement</h3>
+        <p>undefined</p>
+      </div>
+      <div class="info-block">
+        <h3>Enjeux</h3>
+        <p>undefined</p>
+      </div>
+      <div class="info-block">
+        <h3>Besoins</h3>
+        <p>undefined</p>
+      </div>
+    </div>
+  </section>
+  <section class="vision-section">
+    <h2>Vision stratégique</h2>
+    <div class="info-grid">
+      <div class="info-block">
+        <h3>Mission</h3>
+        <p>undefined</p>
+      </div>
+      <div class="info-block">
+        <h3>Vision</h3>
+        <p>undefined</p>
+      </div>
+      <div class="info-block">
+        <h3>Signature</h3>
+        <p>undefined</p>
+      </div>
+      <div class="info-block">
+        <h3>Objectifs</h3>
+        <p>undefined</p>
+      </div>
+    </div>
+  </section>
+</div>
+
+<style>
+  .container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+  }
+
+  h2 {
+    font-size: 24px;
+    margin-bottom: 16px;
+  }
+
+  .info-grid {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+  }
+
+  .info-block {
+    flex: 1 1 calc(50% - 10px);
+    min-width: 200px;
+  }
+
+  h3 {
+    font-size: 18px;
+    margin-bottom: 8px;
+  }
+
+  p {
+    max-width: 800px;
+    font-size: 16px;
+    line-height: 1.5;
+    margin: 0;
+  }
+
+  @media (max-width: 768px) {
+    .info-block {
+      flex: 1 1 100%;
+    }
+  }
+</style>
+<div id="gjs">
+  <section class="swot-section">
+    <h2>Analyse SWOT</h2>
+    <div class="swot-grid">
+      <div class="swot-card positive fadeIn">
+        <h3>Forces</h3>
+        <p>undefined</p>
+      </div>
+      <div class="swot-card negative fadeIn">
+        <h3>Faiblesses</h3>
+        <p>undefined</p>
+      </div>
+      <div class="swot-card positive fadeIn">
+        <h3>Opportunités</h3>
+        <p>undefined</p>
+      </div>
+      <div class="swot-card negative fadeIn">
+        <h3>Menaces</h3>
+        <p>undefined</p>
+      </div>
+    </div>
+  </section>
+</div>
+
+<style>
+  #gjs {
+    padding: 20px;
+    font-family: Arial, sans-serif;
+  }
+
+  .swot-section {
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+
+  .swot-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+  }
+
+  .swot-card {
+    background-color: #f9f9f9;
+    border-radius: 8px;
+    padding: 15px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+  }
+
+  .swot-card h3 {
+    margin-top: 0;
+  }
+
+  .swot-card p {
+    margin: 10px 0 0;
+  }
+
+  .positive {
+    border: 2px solid #92b9e8;
+  }
+
+  .negative {
+    background-color: #e0e0e0;
+  }
+
+  .fadeIn {
+    animation: fadeIn 1s ease-in-out;
+  }
+
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+      transform: translateY(10px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+  @media (max-width: 768px) {
+    .swot-grid {
+      grid-template-columns: 1fr;
+    }
+  }
+</style>
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Recommandations et Personas</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            margin: 0;
+            padding: 20px;
+            box-sizing: border-box;
+        }
+        h2 {
+            font-size: 1.5em;
+            margin-bottom: 20px;
+        }
+        .recommendations {
+            margin-bottom: 40px;
+        }
+        .recommendations ul {
+            list-style: none;
+            padding: 0;
+        }
+        .recommendation-item {
+            margin-bottom: 10px;
+            padding-left: 20px;
+            position: relative;
+        }
+        .recommendation-item i {
+            color: green;
+            position: absolute;
+            left: 0;
+            top: 0;
+        }
+        .personas-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 30px;
+        }
+        .persona-card {
+            border: 1px solid #ccc;
+            padding: 20px;
+            border-radius: 8px;
+        }
+        .persona-card h3 {
+            margin-top: 0;
+            display: flex;
+            align-items: center;
+        }
+        .persona-card i {
+            margin-right: 10px;
+            color: #555;
+        }
+    </style>
+</head>
+<body>
+
+    <section class="recommendations">
+        <h2>Plan d’action recommandé</h2>
+        <ul>
+            <li class="recommendation-item"><i class='fas fa-check'></i> Définir les objectifs clairs</li>
+            <li class="recommendation-item"><i class='fas fa-check'></i> Analyser les données régulièrement</li>
+            <li class="recommendation-item"><i class='fas fa-check'></i> Adapter les stratégies</li>
+        </ul>
+    </section>
+
+    <section class="personas">
+        <h2>Profils clients types</h2>
+        <div class="personas-grid">
+            <div class="persona-card">
+                <h3><i class='fas fa-user'></i> Jean Dupont, Manager</h3>
+                <p><strong>Besoins :</strong> Accès rapide aux informations</p>
+                <p><strong>Douleurs :</strong> Manque de temps</p>
+                <p><strong>Objectifs :</strong> Efficacité accrue</p>
+                <p><strong>Comportements :</strong> Utilise des outils numériques</p>
+            </div>
+            <div class="persona-card">
+                <h3><i class='fas fa-user'></i> Marie Curie, Chercheuse</h3>
+                <p><strong>Besoins :</strong> Données précises et récentes</p>
+                <p><strong>Douleurs :</strong> Charges administratives</p>
+                <p><strong>Objectifs :</strong> Innovations constantes</p>
+                <p><strong>Comportements :</strong> Recherche d'informations détaillées</p>
+            </div>
+        </div>
+    </section>
+
+</body>
+</html>
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+        }
+        .web-analysis-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 20px;
+            padding: 20px;
+        }
+        .web-analysis-grid div {
+            background-color: #f9f9f9;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+        .web-analysis-grid h3 {
+            margin-top: 0;
+        }
+        .fadeIn {
+            animation: fadeIn 1s ease-in-out;
+        }
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+        .footer {
+            background-color: #333;
+            color: #fff;
+            text-align: center;
+            padding: 15px 0;
+        }
+    </style>
+</head>
+<body>
+    <section>
+        <h2>Analyse Web</h2>
+        <div class="web-analysis-grid">
+            <div>
+                <h3>SEO</h3>
+                <p>Non précisé</p>
+            </div>
+            <div>
+                <h3>UX</h3>
+                <p>Non précisé</p>
+            </div>
+            <div>
+                <h3>Performance</h3>
+                <p>Non précisé</p>
+            </div>
+            <div>
+                <h3>Technologies</h3>
+                <p>Non précisé</p>
+            </div>
+        </div>
+    </section>
+    <section>
+        <h2>Synthèse</h2>
+        <p class="conclusion fadeIn">undefined</p>
+    </section>
+    <footer class="footer">
+        © 2025 - undefined
+    </footer>
+</body>
+</html>
+</body>
+</html>
