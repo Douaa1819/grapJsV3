@@ -16,56 +16,47 @@
   </style>
 </head>
 <body>
-<div id="gjs">
+<div id="gjs" class="container">
   <header class="header">
-    <div class="container">
-      <div class="logo">
-        <i class="fas fa-brain"></i>
-      </div>
-      <div class="badge">
-        Confidentiel
-      </div>
+    <div class="logo">
+      <i class="fas fa-brain"></i>
+    </div>
+    <div class="badge">
+      Confidentiel
     </div>
   </header>
   <section class="hero-grid">
-    <div class="container">
-      <div class="hero-content">
-        <h1>Plan d’Adoption <span class="accent">Numérique</span></h1>
-        <p class="baseline">Transformation digitale intelligente propulsée par l’IA</p>
-        <p class="company-name">undefined</p>
-      </div>
-      <div class="orb"></div>
+    <div class="hero-content">
+      <h1>Plan d’Adoption <span class="accent">Numérique</span></h1>
+      <p class="baseline">Transformation digitale intelligente propulsée par l’IA</p>
+      <p class="company-name">undefined</p>
     </div>
+    <div class="orb"></div>
   </section>
 </div>
 
 <style>
-  #gjs {
-    font-family: 'Inter', sans-serif;
-    color: #2c2c2c;
-    background-color: #ffffff;
-  }
-
   .container {
     max-width: 1440px;
     padding: 40px;
     margin: auto;
+    font-family: 'Inter', sans-serif;
+    color: #2c2c2c;
   }
 
   .header {
     position: sticky;
     top: 0;
-    background-color: #ffffff;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 10px 40px;
+    background-color: #ffffff;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    padding: 10px 0;
   }
 
   .logo i {
-    font-size: 1.2rem;
-    color: #2c2c2c;
+    font-size: 24px;
   }
 
   .badge {
@@ -77,19 +68,14 @@
 
   .hero-grid {
     display: grid;
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: repeat(2, 1fr);
     gap: 40px;
     align-items: center;
-  }
-
-  @media (max-width: 768px) {
-    .hero-grid {
-      grid-template-columns: 1fr;
-    }
+    padding: 40px 0;
   }
 
   .hero-content h1 {
-    font-size: 2.5rem;
+    font-size: 2.5em;
     margin-bottom: 20px;
   }
 
@@ -98,109 +84,94 @@
   }
 
   .baseline {
-    font-size: 1.2rem;
+    font-size: 1.25em;
     margin-bottom: 10px;
   }
 
   .company-name {
-    font-size: 1rem;
-    color: #2c2c2c;
+    font-size: 1em;
+    color: #92b9e8;
   }
 
   .orb {
-    width: 150px;
-    height: 150px;
-    border-radius: 50%;
+    width: 200px;
+    height: 200px;
     background: radial-gradient(circle, #92b9e8, #ffffff);
-    animation: pulsate 2s infinite;
+    border-radius: 50%;
+    animation: pulsate 3s infinite alternate;
   }
 
   @keyframes pulsate {
-    0% {
+    from {
       transform: scale(1);
+      opacity: 1;
     }
-    50% {
+    to {
       transform: scale(1.05);
+      opacity: 0.9;
     }
-    100% {
-      transform: scale(1);
+  }
+
+  @media (max-width: 768px) {
+    .hero-grid {
+      grid-template-columns: 1fr;
     }
   }
 </style>
-<div id="gjs">
-    <div class="container">
-        <section class="info-block">
-            <h2>Analyse de l’entreprise</h2>
-            <p>Une vue d'ensemble concise sur l'état actuel de l'entreprise, son secteur, son positionnement, ses enjeux et ses besoins.</p>
-            <div class="info-grid">
-                <div>
-                    <h3>État</h3>
-                    <p>undefined</p>
-                </div>
-                <div>
-                    <h3>Secteur</h3>
-                    <p>undefined</p>
-                </div>
-                <div>
-                    <h3>Positionnement</h3>
-                    <p>undefined</p>
-                </div>
-                <div>
-                    <h3>Enjeux</h3>
-                    <p>undefined</p>
-                </div>
-                <div>
-                    <h3>Besoins</h3>
-                    <p>undefined</p>
-                </div>
+<div id="gjs" class="container">
+    <section class="info-block">
+        <h2>Analyse de l’entreprise</h2>
+        <div class="info-grid">
+            <div>
+                <h3>État</h3>
+                <p>undefined</p>
             </div>
-        </section>
-        <section class="info-block">
-            <h2>Vision stratégique</h2>
-            <p>Un aperçu de la mission, de la vision, de la signature et des objectifs stratégiques de l'entreprise.</p>
-            <div class="info-grid">
-                <div>
-                    <h3>Mission</h3>
-                    <p>undefined</p>
-                </div>
-                <div>
-                    <h3>Vision</h3>
-                    <p>undefined</p>
-                </div>
-                <div>
-                    <h3>Signature</h3>
-                    <p>undefined</p>
-                </div>
-                <div>
-                    <h3>Objectifs</h3>
-                    <p>undefined</p>
-                </div>
+            <div>
+                <h3>Secteur</h3>
+                <p>undefined</p>
             </div>
-        </section>
-    </div>
+            <div>
+                <h3>Positionnement</h3>
+                <p>undefined</p>
+            </div>
+            <div>
+                <h3>Enjeux</h3>
+                <p>undefined</p>
+            </div>
+            <div>
+                <h3>Besoins</h3>
+                <p>undefined</p>
+            </div>
+        </div>
+    </section>
+    <section class="info-block">
+        <h2>Vision stratégique</h2>
+        <div class="info-grid">
+            <div>
+                <h3>Mission</h3>
+                <p>undefined</p>
+            </div>
+            <div>
+                <h3>Vision</h3>
+                <p>undefined</p>
+            </div>
+            <div>
+                <h3>Signature</h3>
+                <p>undefined</p>
+            </div>
+            <div>
+                <h3>Objectifs</h3>
+                <p>undefined</p>
+            </div>
+        </div>
+    </section>
 </div>
 
 <style>
-    #gjs {
-        font-family: Arial, sans-serif;
-        padding: 20px;
-    }
-
     .container {
-        max-width: 1000px;
-        margin: 0 auto;
         padding: 20px;
-    }
-
-    h2 {
-        font-size: 24px;
-        margin-bottom: 10px;
-    }
-
-    p {
-        max-width: 800px;
-        line-height: 1.6;
-        margin-bottom: 20px;
+        max-width: 1200px;
+        margin: 0 auto;
     }
 
     .info-block {
@@ -209,13 +180,41 @@
 
     .info-grid {
         display: grid;
-        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+        grid-template-columns: 1fr;
         gap: 20px;
     }
 
+    .info-grid div {
+        background: #f9f9f9;
+        padding: 15px;
+        border-radius: 8px;
+    }
+
+    h2 {
+        font-size: 24px;
+        margin-bottom: 15px;
+    }
+
     h3 {
-        font-size: 18px;
-        margin-bottom: 5px;
+        font-size: 20px;
+        margin-bottom: 10px;
+    }
+
+    p {
+        max-width: 800px;
+        line-height: 1.6;
+    }
+
+    @media (min-width: 768px) {
+        .info-grid {
+            grid-template-columns: 1fr 1fr;
+        }
+    }
+
+    @media (min-width: 1024px) {
+        .info-grid {
+            grid-template-columns: 1fr 1fr 1fr;
+        }
     }
 </style>
 <div id="gjs">
@@ -244,221 +243,230 @@
   #gjs {
     font-family: Arial, sans-serif;
     padding: 20px;
+    max-width: 800px;
+    margin: auto;
+  }
+
+  h2 {
+    text-align: center;
+    margin-bottom: 20px;
   }
 
   .swot-grid {
     display: grid;
-    grid-template-columns: repeat(2, 1fr);
+    grid-template-columns: 1fr 1fr;
     gap: 20px;
   }
 
   .swot-card {
-    background: #f4f4f4;
+    background-color: #f9f9f9;
+    border: 1px solid #ddd;
+    padding: 15px;
     border-radius: 8px;
-    padding: 20px;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-    transition: transform 0.3s;
+    transition: transform 0.3s ease-in-out;
   }
 
-  .swot-card:hover {
-    transform: translateY(-5px);
+  .swot-card h3 {
+    margin-top: 0;
+  }
+
+  .swot-card p {
+    margin: 0;
   }
 
   .positive {
-    border-left: 5px solid #92b9e8;
+    border-color: #92b9e8;
   }
 
   .negative {
-    background: #e0e0e0;
+    background-color: #e9e9e9;
   }
 
   .fadeIn {
-    animation: fadeIn 0.5s ease-in;
+    animation: fadeIn 1s ease-in-out;
   }
 
   @keyframes fadeIn {
-    from {
-      opacity: 0;
-    }
-    to {
-      opacity: 1;
-    }
+    from { opacity: 0; transform: translateY(10px); }
+    to { opacity: 1; transform: translateY(0); }
   }
 
-  @media (max-width: 768px) {
+  @media (max-width: 600px) {
     .swot-grid {
       grid-template-columns: 1fr;
     }
   }
 </style>
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Recommandations et Personas</title>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            margin: 20px;
-            line-height: 1.6;
-            color: #333;
-        }
-        h2 {
-            font-size: 1.8em;
-            margin-bottom: 15px;
-        }
-        .recommendations {
-            margin-bottom: 40px;
-        }
-        .recommendation-item {
-            display: flex;
-            align-items: center;
-            margin-bottom: 10px;
-            font-size: 1em;
-        }
-        .recommendation-item i {
-            color: #2c3e50;
-            margin-right: 10px;
-        }
-        .personas-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-            gap: 30px;
-        }
-        .persona-card {
-            border: 1px solid #ddd;
-            padding: 20px;
-            border-radius: 5px;
-            background-color: #f9f9f9;
-        }
-        .persona-card h3 {
-            display: flex;
-            align-items: center;
-            font-size: 1.4em;
-            margin-bottom: 10px;
-        }
-        .persona-card i {
-            color: #2980b9;
-            margin-right: 10px;
-        }
-        .persona-card p {
-            margin-bottom: 10px;
-            font-size: 0.95em;
-        }
-    </style>
-</head>
-<body>
-    <section class="recommendations">
-        <h2>Plan d’action recommandé</h2>
-        <ul>
-            <li class="recommendation-item"><i class="fas fa-check"></i> Item 1</li>
-            <li class="recommendation-item"><i class="fas fa-check"></i> Item 2</li>
-            <li class="recommendation-item"><i class="fas fa-check"></i> Item 3</li>
-        </ul>
-    </section>
+<div class="recommendations-personas-section">
+  <div class="recommendations">
+    <h2>Plan d’action recommandé</h2>
+    <ul>
+      <li class="recommendation-item"><i class='fas fa-check'></i> Undefined</li>
+      <li class="recommendation-item"><i class='fas fa-check'></i> Undefined</li>
+      <li class="recommendation-item"><i class='fas fa-check'></i> Undefined</li>
+    </ul>
+  </div>
+  <div class="personas">
+    <h2>Profils clients types</h2>
+    <div class="personas-grid">
+      <div class="persona-card">
+        <h3><i class='fas fa-user'></i> Nom, Rôle</h3>
+        <p><strong>Besoins:</strong> Description des besoins.</p>
+        <p><strong>Douleurs:</strong> Description des douleurs.</p>
+        <p><strong>Objectifs:</strong> Description des objectifs.</p>
+        <p><strong>Comportements:</strong> Description des comportements.</p>
+      </div>
+      <div class="persona-card">
+        <h3><i class='fas fa-user'></i> Nom, Rôle</h3>
+        <p><strong>Besoins:</strong> Description des besoins.</p>
+        <p><strong>Douleurs:</strong> Description des douleurs.</p>
+        <p><strong>Objectifs:</strong> Description des objectifs.</p>
+        <p><strong>Comportements:</strong> Description des comportements.</p>
+      </div>
+    </div>
+  </div>
+</div>
 
-    <section class="personas">
-        <h2>Profils clients types</h2>
-        <div class="personas-grid">
-            <div class="persona-card">
-                <h3><i class="fas fa-user"></i>Nom du Persona 1, Rôle</h3>
-                <p><strong>Besoins:</strong> Description des besoins.</p>
-                <p><strong>Douleurs:</strong> Description des douleurs.</p>
-                <p><strong>Objectifs:</strong> Description des objectifs.</p>
-                <p><strong>Comportements:</strong> Description des comportements.</p>
-            </div>
-            <div class="persona-card">
-                <h3><i class="fas fa-user"></i>Nom du Persona 2, Rôle</h3>
-                <p><strong>Besoins:</strong> Description des besoins.</p>
-                <p><strong>Douleurs:</strong> Description des douleurs.</p>
-                <p><strong>Objectifs:</strong> Description des objectifs.</p>
-                <p><strong>Comportements:</strong> Description des comportements.</p>
-            </div>
-        </div>
-    </section>
-</body>
-</html>
+<style>
+  .recommendations-personas-section {
+    font-family: Arial, sans-serif;
+    padding: 20px;
+    max-width: 1200px;
+    margin: auto;
+  }
+
+  .recommendations h2,
+  .personas h2 {
+    font-size: 1.5em;
+    margin-bottom: 20px;
+  }
+
+  .recommendations ul {
+    list-style: none;
+    padding: 0;
+  }
+
+  .recommendation-item {
+    font-size: 1em;
+    margin-bottom: 10px;
+    display: flex;
+    align-items: center;
+  }
+
+  .recommendation-item i {
+    margin-right: 10px;
+  }
+
+  .personas-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+  }
+
+  .persona-card {
+    border: 1px solid #ddd;
+    padding: 20px;
+    border-radius: 5px;
+    background-color: #f9f9f9;
+  }
+
+  .persona-card h3 {
+    font-size: 1.2em;
+    margin-bottom: 10px;
+    display: flex;
+    align-items: center;
+  }
+
+  .persona-card i {
+    margin-right: 10px;
+  }
+
+  .persona-card p {
+    margin-bottom: 10px;
+    font-size: 0.9em;
+  }
+</style>
 <!DOCTYPE html>
 <html lang="fr">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Sections Finales</title>
     <style>
         body {
             margin: 0;
             font-family: Arial, sans-serif;
-            color: #333;
+        }
+        .web-analysis {
+            padding: 40px;
+        }
+        .web-analysis h2 {
+            margin-bottom: 20px;
         }
         .web-analysis-grid {
             display: grid;
             grid-template-columns: repeat(2, 1fr);
             gap: 20px;
-            padding: 20px;
         }
-        .web-analysis-grid > div {
+        .web-analysis-grid div {
             background-color: #f9f9f9;
-            border-radius: 8px;
-            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
             padding: 20px;
-        }
-        h2 {
-            text-align: center;
-            margin: 20px 0;
-        }
-        h3 {
-            margin-top: 0;
+            border-radius: 5px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
         }
         .conclusion {
-            text-align: center;
-            padding: 20px;
-            animation: fadeIn 1s ease-in-out;
+            padding: 40px;
+            opacity: 0;
+            animation: fadeIn 2s forwards;
         }
-        @keyframes fadeIn {
-            from { opacity: 0; }
-            to { opacity: 1; }
+        .conclusion h2 {
+            margin-bottom: 20px;
         }
         .footer {
             background-color: #333;
             color: #fff;
             text-align: center;
-            padding: 10px 0;
+            padding: 20px 0;
+            font-size: 14px;
+        }
+        @keyframes fadeIn {
+            to {
+                opacity: 1;
+            }
         }
     </style>
 </head>
 <body>
 
-    <section>
-        <h2>Analyse Web</h2>
-        <div class="web-analysis-grid">
-            <div>
-                <h3>SEO</h3>
-                <p>Non précisé</p>
-            </div>
-            <div>
-                <h3>UX</h3>
-                <p>Non précisé</p>
-            </div>
-            <div>
-                <h3>Performance</h3>
-                <p>Non précisé</p>
-            </div>
-            <div>
-                <h3>Technologies</h3>
-                <p>Non précisé</p>
-            </div>
+<section class="web-analysis">
+    <h2>Analyse Web</h2>
+    <div class="web-analysis-grid">
+        <div>
+            <h3>SEO</h3>
+            <p>Non précisé</p>
         </div>
-    </section>
+        <div>
+            <h3>UX</h3>
+            <p>Non précisé</p>
+        </div>
+        <div>
+            <h3>Performance</h3>
+            <p>Non précisé</p>
+        </div>
+        <div>
+            <h3>Technologies</h3>
+            <p>Non précisé</p>
+        </div>
+    </div>
+</section>
 
-    <section>
-        <h2>Synthèse</h2>
-        <p class="conclusion">undefined</p>
-    </section>
+<section class="conclusion">
+    <h2>Synthèse</h2>
+    <p>undefined</p>
+</section>
 
-    <footer class="footer">
-        © 2025 - undefined
-    </footer>
+<footer class="footer">
+    © 2025 - undefined
+</footer>
 
 </body>
 </html>
