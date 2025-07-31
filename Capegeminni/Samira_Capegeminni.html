@@ -16,299 +16,326 @@
   </style>
 </head>
 <body>
-<div id="gjs" style="font-family: 'Inter', sans-serif; max-width: 1440px; margin: 0 auto;">
-  <header style="position: sticky; top: 0; background: #ffffff; box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); padding: 15px 20px; display: flex; justify-content: space-between; align-items: center; z-index: 1000;">
-    <div style="display: flex; align-items: center;">
-      <i class="fas fa-brain" style="font-size: 24px; color: #2c2c2c;"></i>
-    </div>
-    <div style="background-color: #92b9e8; color: #ffffff; padding: 5px 10px; border-radius: 5px; font-size: 14px;">
-      Confidentiel
-    </div>
-  </header>
-  <section style="display: grid; grid-template-columns: 1fr 1fr; gap: 20px; padding: 40px 20px; align-items: center;">
-    <div>
-      <h1 style="font-size: 3rem; color: #2c2c2c; margin-bottom: 10px; line-height: 1.2;">
-        Plan d’Adoption <span class="accent" style="color: #92b9e8;">Numérique</span>
-      </h1>
-      <p class="baseline" style="font-size: 1.25rem; color: #2c2c2c; margin-bottom: 5px;">
-        Transformation digitale intelligente propulsée par l’IA
-      </p>
-      <p class="company-name" style="font-size: 1rem; color: #2c2c2c;">
-        Capegemmini
-      </p>
-    </div>
-    <div style="position: relative; display: flex; justify-content: center; align-items: center;">
-      <div style="width: 200px; height: 200px; border-radius: 50%; background: #92b9e8; animation: pulse 2s infinite alternate;"></div>
-    </div>
-  </section>
+<div id="gjs">
   <style>
-    @keyframes pulse {
-      0% {
+    body {
+      font-family: 'Inter', sans-serif;
+      color: #2c2c2c;
+      margin: 0;
+      padding: 0;
+      max-width: 1440px;
+    }
+    #header {
+      position: sticky;
+      top: 0;
+      background-color: #ffffff;
+      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+      padding: 10px 20px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+    #header .logo {
+      font-size: 24px;
+    }
+    #header .badge {
+      background-color: #92b9e8;
+      color: #ffffff;
+      padding: 5px 10px;
+      border-radius: 5px;
+    }
+    #hero {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      align-items: center;
+      padding: 50px 20px;
+      gap: 20px;
+    }
+    #hero h1 {
+      font-size: 36px;
+      margin: 0;
+    }
+    #hero .accent {
+      color: #92b9e8;
+    }
+    #hero .baseline {
+      font-size: 18px;
+      margin-top: 10px;
+    }
+    #hero .company-name {
+      font-size: 16px;
+      margin-top: 5px;
+      font-weight: bold;
+    }
+    #hero .animated-circle {
+      width: 150px;
+      height: 150px;
+      border-radius: 50%;
+      background-color: #92b9e8;
+      animation: animateCircle 3s infinite alternate ease-in-out;
+      margin: 0 auto;
+    }
+    @keyframes animateCircle {
+      from {
         background-color: #92b9e8;
       }
-      100% {
+      to {
         background-color: #ffffff;
       }
     }
     @media (max-width: 768px) {
-      section {
+      #hero {
         grid-template-columns: 1fr;
+        text-align: center;
+      }
+      #hero .animated-circle {
+        margin: 20px auto 0;
       }
     }
   </style>
+
+  <div id="header">
+    <div class="logo"><i class="fas fa-brain"></i></div>
+    <div class="badge">Confidentiel</div>
+  </div>
+
+  <div id="hero">
+    <div>
+      <h1>Plan d’Adoption <span class="accent">Numérique</span></h1>
+      <p class="baseline">Transformation digitale intelligente propulsée par l’IA</p>
+      <p class="company-name">Capegemmini</p>
+    </div>
+    <div class="animated-circle"></div>
+  </div>
+</div>
+<div id="gjs" style="font-family: Inter, sans-serif; color: #2c2c2c; max-width: 1440px; margin: 0 auto; padding: 20px; background-color: #ffffff;">
+  <div style="max-width: 800px; margin: 0 auto; padding: 20px; border: 1px solid #92b9e8; border-radius: 8px;">
+    <h2 style="font-size: 24px; margin-bottom: 16px; color: #2c2c2c;">Analyse de l'entreprise</h2>
+    <div style="margin-bottom: 24px;">
+      <h3 style="font-size: 20px; margin-bottom: 8px;">État de l'Entreprise</h3>
+      <p style="font-size: 16px; line-height: 1.6;">Capgemini, leader du secteur IT, est en constante évolution grâce à son approche innovante et sa compréhension approfondie des besoins technologiques des entreprises mondiales.</p>
+    </div>
+    <div style="margin-bottom: 24px;">
+      <h3 style="font-size: 20px; margin-bottom: 8px;">Positionnement</h3>
+      <p style="font-size: 16px; line-height: 1.6;">Positionnée à l'avant-garde de la transformation digitale, Capgemini se distingue par sa capacité à offrir des solutions sur mesure, alliant expertise technique et stratégie business.</p>
+    </div>
+    <div style="margin-bottom: 24px;">
+      <h3 style="font-size: 20px; margin-bottom: 8px;">Enjeux</h3>
+      <p style="font-size: 16px; line-height: 1.6;">Les enjeux actuels incluent l'adaptation rapide aux nouvelles technologies, l'optimisation des processus internes et l'amélioration continue de l'expérience client.</p>
+    </div>
+    <div style="margin-bottom: 24px;">
+      <h3 style="font-size: 20px; margin-bottom: 8px;">Besoins</h3>
+      <p style="font-size: 16px; line-height: 1.6;">Capgemini doit répondre à des besoins croissants en matière de solutions cloud, de cybersécurité renforcée et de services d'intelligence artificielle.</p>
+    </div>
+  </div>
+  <div style="max-width: 800px; margin: 40px auto; padding: 20px; border: 1px solid #92b9e8; border-radius: 8px;">
+    <h2 style="font-size: 24px; margin-bottom: 16px; color: #2c2c2c;">Vision Stratégique</h2>
+    <div style="margin-bottom: 24px;">
+      <h3 style="font-size: 20px; margin-bottom: 8px;">Mission</h3>
+      <p style="font-size: 16px; line-height: 1.6;">La mission de Capgemini est de libérer le potentiel des technologies de demain pour transformer les entreprises et améliorer la qualité de vie des clients et collaborateurs.</p>
+    </div>
+    <div style="margin-bottom: 24px;">
+      <h3 style="font-size: 20px; margin-bottom: 8px;">Vision</h3>
+      <p style="font-size: 16px; line-height: 1.6;">Aspirer à être le partenaire privilégié en innovation technologique, en fournissant des solutions durables et éthiques qui génèrent une réelle valeur ajoutée.</p>
+    </div>
+    <div style="margin-bottom: 24px;">
+      <h3 style="font-size: 20px; margin-bottom: 8px;">Signature Stratégique</h3>
+      <p style="font-size: 16px; line-height: 1.6;">"Transformer les idées en réalité, grâce à la puissance de la technologie et à l'engagement humain."</p>
+    </div>
+    <div style="margin-bottom: 24px;">
+      <h3 style="font-size: 20px; margin-bottom: 8px;">Objectifs</h3>
+      <p style="font-size: 16px; line-height: 1.6;">Les objectifs incluent l'expansion sur les marchés émergents, l'augmentation de la part de marché dans le secteur cloud, et le développement de nouvelles alliances stratégiques.</p>
+    </div>
+  </div>
+</div>
+<div id="gjs" style="font-family: 'Inter', sans-serif; max-width: 1440px; margin: 0 auto; color: #2c2c2c;">
+  <section style="padding: 20px;">
+    <div style="display: grid; grid-template-columns: repeat(2, 1fr); gap: 20px;">
+      <div class="swot-card positive" style="border: 2px solid #92b9e8; border-radius: 8px; padding: 15px; background-color: #ffffff; animation: fadeIn 0.3s ease;">
+        <h3 style="margin-bottom: 10px;">Forces</h3>
+        <ul style="list-style: none; padding: 0;">
+          <li>Une équipe flexible et réactive</li>
+          <li>Des relations solides avec nos partenaires stratégiques</li>
+          <li>Une culture d'entreprise axée sur l'écoute et la formation continue</li>
+        </ul>
+      </div>
+      <div class="swot-card negative" style="border: 2px solid #f4f4f4; border-radius: 8px; padding: 15px; background-color: #f4f4f4; animation: fadeIn 0.3s ease;">
+        <h3 style="margin-bottom: 10px;">Faiblesses</h3>
+        <ul style="list-style: none; padding: 0;">
+          <li>Manque de compétences internes en numérique</li>
+          <li>Budget limité pour de grands projets de transformation</li>
+          <li>Outils actuels fonctionnant en silos</li>
+        </ul>
+      </div>
+      <div class="swot-card positive" style="border: 2px solid #92b9e8; border-radius: 8px; padding: 15px; background-color: #ffffff; animation: fadeIn 0.3s ease;">
+        <h3 style="margin-bottom: 10px;">Opportunités</h3>
+        <ul style="list-style: none; padding: 0;">
+          <li>undefined</li>
+        </ul>
+      </div>
+      <div class="swot-card negative" style="border: 2px solid #f4f4f4; border-radius: 8px; padding: 15px; background-color: #f4f4f4; animation: fadeIn 0.3s ease;">
+        <h3 style="margin-bottom: 10px;">Menaces</h3>
+        <ul style="list-style: none; padding: 0;">
+          <li>La concurrence est forte, avec des concurrents ayant une meilleure visibilité en ligne et des offres plus claires</li>
+          <li>Le risque de ne pas digitaliser rapidement peut nous faire perdre des parts de marché</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+</div>
+
+<style>
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+    }
+    to {
+      opacity: 1;
+    }
+  }
+
+  @media (max-width: 768px) {
+    #gjs > section > div {
+      grid-template-columns: 1fr;
+    }
+  }
+</style>
+<div id="gjs" style="max-width: 1440px; margin: 0 auto; font-family: 'Inter', sans-serif; color: #2c2c2c;">
+  <section style="background-color: #ffffff; padding: 40px;">
+    <h2 style="color: #92b9e8; margin-bottom: 20px;">Plan d’action recommandé</h2>
+    <ol style="list-style: none; padding: 0;">
+      <li class="recommendation-item" style="display: flex; align-items: center; margin-bottom: 10px;">
+        <i class="fas fa-check" style="color: #92b9e8; margin-right: 10px;"></i>
+        Prioriser la refonte du site web pour améliorer l'expérience utilisateur et renforcer la crédibilité en ligne.
+      </li>
+      <li class="recommendation-item" style="display: flex; align-items: center; margin-bottom: 10px;">
+        <i class="fas fa-check" style="color: #92b9e8; margin-right: 10px;"></i>
+        Mettre en place un CRM pour centraliser et optimiser la gestion des clients.
+      </li>
+      <li class="recommendation-item" style="display: flex; align-items: center; margin-bottom: 10px;">
+        <i class="fas fa-check" style="color: #92b9e8; margin-right: 10px;"></i>
+        Développer une stratégie de contenu pour les réseaux sociaux et automatiser les processus internes pour gagner en efficacité.
+      </li>
+    </ol>
+  </section>
+
+  <section style="background-color: #fafafa; padding: 40px; display: flex; gap: 20px; flex-wrap: wrap;">
+    <div class="persona-card" style="background-color: #ffffff; border-radius: 8px; padding: 20px; box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); flex: 1 1 calc(33.333% - 20px); max-width: calc(33.333% - 20px);">
+      <i class='fas fa-user' style="color: #92b9e8; margin-bottom: 10px;"></i>
+      <h3 style="margin-top: 0; margin-bottom: 10px;">Persona 1</h3>
+      <p><strong>Rôle:</strong> Manager IT</p>
+      <p><strong>Besoins:</strong> Outils de gestion de projet efficaces</p>
+      <p><strong>Douleurs:</strong> Trop de réunions, manque de temps</p>
+      <p><strong>Objectifs:</strong> Optimiser le flux de travail</p>
+      <p><strong>Comportements numériques:</strong> Usage intensif des outils collaboratifs</p>
+    </div>
+    <div class="persona-card" style="background-color: #ffffff; border-radius: 8px; padding: 20px; box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); flex: 1 1 calc(33.333% - 20px); max-width: calc(33.333% - 20px);">
+      <i class='fas fa-user' style="color: #92b9e8; margin-bottom: 10px;"></i>
+      <h3 style="margin-top: 0; margin-bottom: 10px;">Persona 2</h3>
+      <p><strong>Rôle:</strong> Développeur</p>
+      <p><strong>Besoins:</strong> Environnement de développement flexible</p>
+      <p><strong>Douleurs:</strong> Bugs récurrents</p>
+      <p><strong>Objectifs:</strong> Améliorer la qualité du code</p>
+      <p><strong>Comportements numériques:</strong> Participation aux forums tech</p>
+    </div>
+    <div class="persona-card" style="background-color: #ffffff; border-radius: 8px; padding: 20px; box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); flex: 1 1 calc(33.333% - 20px); max-width: calc(33.333% - 20px);">
+      <i class='fas fa-user' style="color: #92b9e8; margin-bottom: 10px;"></i>
+      <h3 style="margin-top: 0; margin-bottom: 10px;">Persona 3</h3>
+      <p><strong>Rôle:</strong> Responsable marketing</p>
+      <p><strong>Besoins:</strong> Analyser les données clients</p>
+      <p><strong>Douleurs:</strong> Manque de visibilité sur les campagnes</p>
+      <p><strong>Objectifs:</strong> Augmenter le ROI des campagnes</p>
+      <p><strong>Comportements numériques:</strong> Utilisation avancée des outils d'analyse</p>
+    </div>
+  </section>
 </div>
 <!DOCTYPE html>
-<html lang="en">
+<html lang="fr">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Capgemini IT Analysis and Strategic Vision</title>
     <style>
         body {
             font-family: 'Inter', sans-serif;
             color: #2c2c2c;
             background-color: #ffffff;
             margin: 0;
-            padding: 20px;
-            max-width: 1440px;
-            box-sizing: border-box;
+            padding: 0;
         }
         #gjs {
-            max-width: 800px;
-            margin: auto;
+            max-width: 1440px;
+            margin: 0 auto;
             padding: 20px;
-            border: 1px solid #92b9e8;
-            border-radius: 8px;
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-            transition: transform 0.3s;
         }
-        #gjs:hover {
-            transform: translateY(-5px);
+        .analysis-section {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 20px;
         }
-        h2, h3 {
-            color: #2c2c2c;
-            margin-bottom: 10px;
+        .analysis-block {
+            flex: 1 1 calc(25% - 20px);
+            background-color: #f1f1f1;
+            padding: 20px;
+            border-radius: 5px;
+            transition: background-color 0.3s ease;
         }
-        h2 {
+        .analysis-block:hover {
+            background-color: #e0e0e0;
+        }
+        .icon {
             font-size: 24px;
-            border-bottom: 2px solid #92b9e8;
-            padding-bottom: 5px;
-            margin-bottom: 20px;
+            margin-bottom: 10px;
+            color: #92b9e8;
         }
-        h3 {
-            font-size: 20px;
-            margin-top: 20px;
+        .conclusion {
+            margin-top: 40px;
+            padding: 20px;
+            background-color: #f9f9f9;
+            border-radius: 5px;
         }
-        p {
-            line-height: 1.6;
-            margin-bottom: 15px;
+        .footer {
+            background-color: #92b9e8;
+            color: #ffffff;
+            text-align: center;
+            padding: 10px 0;
+            margin-top: 40px;
         }
     </style>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
 </head>
 <body>
     <div id="gjs">
-        <h2>Analyse de l’Entreprise</h2>
-        <h3>État de l'Entreprise</h3>
-        <p>L'entreprise Capgemini se positionne comme un leader mondial des services de conseil, de transformation numérique, de technologie et d'ingénierie. Avec une forte présence dans le secteur de l'IT, elle s'efforce de répondre aux besoins variés de ses clients.</p>
-        
-        <h3>Positionnement</h3>
-        <p>Capgemini est reconnu pour son expertise en développement de solutions innovantes, s'adaptant aux évolutions rapides du marché technologique. Son positionnement stratégique repose sur une compréhension approfondie des marchés locaux et mondiaux.</p>
-        
-        <h3>Enjeux et Besoins</h3>
-        <p>Les enjeux majeurs incluent la digitalisation croissante, la cybersécurité, et l'optimisation des infrastructures IT. Capgemini vise à fournir des solutions robustes pour assurer la continuité et l'efficacité des opérations de ses clients.</p>
-
-        <h2>Vision Stratégique</h2>
-        <h3>Mission</h3>
-        <p>La mission de Capgemini est de libérer le potentiel de l'innovation pour stimuler la croissance des entreprises et améliorer la qualité de vie grâce à des solutions technologiques avancées.</p>
-        
-        <h3>Vision</h3>
-        <p>Capgemini envisage un avenir où les technologies numériques sont au cœur des stratégies de toutes les entreprises, facilitant l'agilité, la résilience et l'innovation continue.</p>
-        
-        <h3>Signature Stratégique</h3>
-        <p>Grâce à son engagement envers l'excellence et l'innovation, Capgemini s'engage à offrir une valeur ajoutée tangible à ses clients, transformant les défis en opportunités de croissance.</p>
-        
-        <h3>Objectifs</h3>
-        <p>Les objectifs incluent l'expansion mondiale tout en renforçant les capacités locales, l'accélération de la transformation numérique des clients, et la promotion de la durabilité dans toutes les opérations.</p>
+        <div class="analysis-section">
+            <div class="analysis-block">
+                <div class="icon"><i class="fas fa-search"></i></div>
+                <h3>SEO</h3>
+                <p>60%</p>
+            </div>
+            <div class="analysis-block">
+                <div class="icon"><i class="fas fa-users"></i></div>
+                <h3>UX</h3>
+                <p>La navigation sur le site est intuitive, mais certaines sections pourraient bénéficier d'une meilleure accessibilité.</p>
+            </div>
+            <div class="analysis-block">
+                <div class="icon"><i class="fas fa-tachometer-alt"></i></div>
+                <h3>Performance</h3>
+                <p>70%</p>
+            </div>
+            <div class="analysis-block">
+                <div class="icon"><i class="fas fa-cogs"></i></div>
+                <h3>Technologies</h3>
+                <p>Utilisation de technologies modernes pour une meilleure performance et maintenabilité.</p>
+            </div>
+        </div>
+        <div class="conclusion">
+            <h3>Conclusion</h3>
+            <p>Pour réussir notre transformation numérique, il est crucial de prioriser les actions à fort impact comme la refonte du site web et l'implémentation d'un CRM. En agissant par phases, nous pourrons maîtriser le budget et impliquer progressivement nos équipes, assurant ainsi une adoption réussie des nouvelles pratiques numériques.</p>
+        </div>
+        <div class="footer">
+            © 2025 - Capegemmini
+        </div>
     </div>
 </body>
 </html>
-<div id="gjs" style="font-family: 'Inter', sans-serif; max-width: 1440px; margin: auto; padding: 20px; box-sizing: border-box;">
-    <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 20px;">
-        <div class="swot-card positive" style="border: 1px solid #92b9e8; padding: 20px; border-radius: 8px; background-color: #ffffff; animation: fadeIn 0.5s;">
-            <h2 style="color: #2c2c2c;">Forces</h2>
-            <p style="color: #2c2c2c;">Capegemmini bénéficie d'une équipe motivée, d'une forte capacité d'écoute client, et d'une flexibilité organisationnelle qui lui permet de s'adapter rapidement aux besoins du marché.</p>
-        </div>
-        <div class="swot-card negative" style="border: 1px solid #f4f4f4; padding: 20px; border-radius: 8px; background-color: #f4f4f4; animation: fadeIn 0.5s;">
-            <h2 style="color: #2c2c2c;">Faiblesses</h2>
-            <p style="color: #2c2c2c;">Les processus internes non formalisés et la gestion en silo des outils numériques sont des faiblesses actuelles qui freinent l'efficacité opérationnelle.</p>
-        </div>
-        <div class="swot-card positive" style="border: 1px solid #92b9e8; padding: 20px; border-radius: 8px; background-color: #ffffff; animation: fadeIn 0.5s;">
-            <h2 style="color: #2c2c2c;">Opportunités</h2>
-            <p style="color: #2c2c2c;">undefined</p>
-        </div>
-        <div class="swot-card negative" style="border: 1px solid #f4f4f4; padding: 20px; border-radius: 8px; background-color: #f4f4f4; animation: fadeIn 0.5s;">
-            <h2 style="color: #2c2c2c;">Menaces</h2>
-            <p style="color: #2c2c2c;">La concurrence croissante de sociétés mieux établies avec une visibilité en ligne plus forte et des offres plus claires constitue une menace pour Capegemmini.</p>
-        </div>
-    </div>
-</div>
-
-<style>
-    @keyframes fadeIn {
-        from { opacity: 0; }
-        to { opacity: 1; }
-    }
-</style>
-<div id="gjs" style="max-width: 1440px; margin: auto; font-family: Inter, sans-serif; color: #2c2c2c; background-color: #ffffff;">
-  <section style="padding: 20px;">
-    <h2 style="color: #2c2c2c; text-align: center;">Plan d'action recommandé</h2>
-    <ol style="list-style: none; padding: 0; counter-reset: item;">
-      <li class="recommendation-item" style="padding: 10px 0; display: flex; align-items: center;">
-        <i class="fas fa-check" style="color: #92b9e8; margin-right: 10px;"></i>
-        Il est recommandé de prioriser la refonte du site web pour améliorer l'expérience utilisateur.
-      </li>
-      <li class="recommendation-item" style="padding: 10px 0; display: flex; align-items: center;">
-        <i class="fas fa-check" style="color: #92b9e8; margin-right: 10px;"></i>
-        Mettre en place un CRM robuste pour la gestion client.
-      </li>
-      <li class="recommendation-item" style="padding: 10px 0; display: flex; align-items: center;">
-        <i class="fas fa-check" style="color: #92b9e8; margin-right: 10px;"></i>
-        Automatiser les processus internes clés.
-      </li>
-      <li class="recommendation-item" style="padding: 10px 0; display: flex; align-items: center;">
-        <i class="fas fa-check" style="color: #92b9e8; margin-right: 10px;"></i>
-        Investir dans la formation des employés pour combler les lacunes techniques.
-      </li>
-    </ol>
-  </section>
-
-  <section style="padding: 20px; background-color: #fafafa;">
-    <h2 style="color: #2c2c2c; text-align: center;">Personas clients types</h2>
-    <div style="display: flex; flex-wrap: wrap; gap: 20px; justify-content: center;">
-      <div class="persona-card" style="background-color: #ffffff; border-radius: 8px; padding: 20px; width: 300px; box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);">
-        <i class='fas fa-user' style="color: #92b9e8; font-size: 24px;"></i>
-        <h3 style="margin-top: 10px;">Alex Dupont</h3>
-        <p><strong>Rôle:</strong> Responsable IT</p>
-        <p><strong>Besoins:</strong> Solutions innovantes</p>
-        <p><strong>Douleurs:</strong> Manque de ressources</p>
-        <p><strong>Objectifs:</strong> Optimiser l'infrastructure</p>
-        <p><strong>Comportements numériques:</strong> Utilisation avancée des outils IT</p>
-      </div>
-      <div class="persona-card" style="background-color: #ffffff; border-radius: 8px; padding: 20px; width: 300px; box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);">
-        <i class='fas fa-user' style="color: #92b9e8; font-size: 24px;"></i>
-        <h3 style="margin-top: 10px;">Marie Durant</h3>
-        <p><strong>Rôle:</strong> Chef de projet</p>
-        <p><strong>Besoins:</strong> Coordination efficace</p>
-        <p><strong>Douleurs:</strong> Délais serrés</p>
-        <p><strong>Objectifs:</strong> Livrer à temps</p>
-        <p><strong>Comportements numériques:</strong> Utilisation fréquente de logiciels de gestion</p>
-      </div>
-      <div class="persona-card" style="background-color: #ffffff; border-radius: 8px; padding: 20px; width: 300px; box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);">
-        <i class='fas fa-user' style="color: #92b9e8; font-size: 24px;"></i>
-        <h3 style="margin-top: 10px;">Jean Martin</h3>
-        <p><strong>Rôle:</strong> Analyste</p>
-        <p><strong>Besoins:</strong> Données précises</p>
-        <p><strong>Douleurs:</strong> Informations fragmentées</p>
-        <p><strong>Objectifs:</strong> Insights clairs</p>
-        <p><strong>Comportements numériques:</strong> Analyse de données approfondie</p>
-      </div>
-    </div>
-  </section>
-</div>
-<div id="gjs">
-  <style>
-    body {
-      font-family: 'Inter', sans-serif;
-      color: #2c2c2c;
-      max-width: 1440px;
-      margin: 0 auto;
-      padding: 20px;
-      box-sizing: border-box;
-    }
-
-    .section {
-      margin-bottom: 40px;
-    }
-
-    .heading {
-      font-size: 24px;
-      margin-bottom: 20px;
-    }
-
-    .block-container {
-      display: flex;
-      justify-content: space-between;
-      flex-wrap: wrap;
-    }
-
-    .block {
-      background-color: #f7f7f7;
-      padding: 20px;
-      flex-basis: calc(25% - 10px);
-      box-sizing: border-box;
-      margin-bottom: 20px;
-      transition: transform 0.3s ease;
-    }
-
-    .block:hover {
-      transform: scale(1.05);
-    }
-
-    .block-title {
-      font-size: 18px;
-      margin-bottom: 10px;
-    }
-
-    .footer {
-      background-color: #92b9e8;
-      color: #fff;
-      text-align: center;
-      padding: 20px 0;
-    }
-
-    @media (max-width: 768px) {
-      .block {
-        flex-basis: calc(50% - 10px);
-      }
-    }
-
-    @media (max-width: 480px) {
-      .block {
-        flex-basis: 100%;
-      }
-    }
-  </style>
-
-  <div class="section">
-    <div class="heading">Analyse Web</div>
-    <div class="block-container">
-      <div class="block">
-        <div class="block-title">SEO</div>
-        <div>65%</div>
-      </div>
-      <div class="block">
-        <div class="block-title">UX</div>
-        <div>Le site web présente une navigation relativement intuitive mais pourrait bénéficier d'une meilleure optimisation pour les appareils mobiles et d'une accessibilité renforcée.</div>
-      </div>
-      <div class="block">
-        <div class="block-title">Performance</div>
-        <div>70%</div>
-      </div>
-      <div class="block">
-        <div class="block-title">Technologies</div>
-        <div>Non précisé</div>
-      </div>
-    </div>
-  </div>
-
-  <div class="section">
-    <div class="heading">Conclusion</div>
-    <p>Capegemmini doit impérativement structurer sa stratégie numérique pour capitaliser sur ses forces et combler ses faiblesses. Un plan d'action en plusieurs phases permettra d'atteindre progressivement les objectifs fixés tout en maîtrisant les coûts et en impliquant l'ensemble de l'équipe. La transformation numérique n'est pas seulement un choix, mais une nécessité pour se maintenir compétitif.</p>
-  </div>
-
-  <div class="footer">
-    © 2025 - Capegemmini
-  </div>
-</div>
 </body>
 </html>
