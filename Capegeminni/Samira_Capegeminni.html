@@ -1172,16 +1172,18 @@
   });
   function sendToN8N() {
     const html = editor.getHtml();
-  const allStyles = Array.from(document.querySelectorAll("style")).map(
-    style => style.innerHTML
-  ).join("\n");
+  // 1. Lire tous les <style> dans l'iframe (canvas)
+  const iframeStyles = Array.from(iframeDoc.querySelectorAll("style"))
+    .map(style => style.innerHTML)
+    .join("\n");
 
-  const iframeDoc = editor.Canvas.getFrameEl().contentDocument;
-  const iframeStyles = Array.from(iframeDoc.querySelectorAll("style")).map(
-    style => style.innerHTML
-  ).join("\n");
+  // 2. Optionnel : ajouter aussi les styles du document principal (si besoin)
+  const mainStyles = Array.from(document.querySelectorAll("style"))
+    .map(style => style.innerHTML)
+    .join("\n");
 
-  const css = allStyles + "\n" + iframeStyles;
+  // 3. CSS final : animations incluses
+  const css = iframeStyles + "\n" + mainStyles;
 
     fetch("https://n8n.srv787725.hstgr.cloud/webhook/html-save", {
       method: "POST",
