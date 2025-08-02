@@ -1172,7 +1172,16 @@
   });
   function sendToN8N() {
     const html = editor.getHtml();
-    const css = editor.getCss();
+  const iframeDoc = editor.Canvas.getFrameEl().contentDocument;
+  const css = [...iframeDoc.styleSheets]
+    .map(sheet => {
+      try {
+        return [...sheet.cssRules].map(rule => rule.cssText).join("\n");
+      } catch {
+        return "";
+      }
+    })
+    .join("\n");
 
     fetch("https://n8n.srv787725.hstgr.cloud/webhook/html-save", {
       method: "POST",
