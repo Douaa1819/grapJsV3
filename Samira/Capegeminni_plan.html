@@ -940,6 +940,12 @@
     .editor-container { height: 100vh; }
     p, h3, div { line-height: 1.6; }
   
+
+        .gjs-cv-unscale { scale: 1 }
+      
+
+        .cv-unscale { scale: 1 }
+      
 .lf-progress {
   -webkit-appearance: none;
   -moz-apperance: none;
@@ -1175,11 +1181,83 @@
 }
 
 
-        .gjs-cv-unscale { scale: 1 }
+      
+    body { background-color: #fff }
+    * ::-webkit-scrollbar-track { background: rgba(0, 0, 0, 0.1) }
+    * ::-webkit-scrollbar-thumb { background: rgba(255, 255, 255, 0.2) }
+    * ::-webkit-scrollbar { width: 10px }
+  
+
       
 
-        .cv-unscale { scale: 1 }
+      [data-gjs-type="wrapper"] {
+        min-height: 100vh;
+        padding-top: 0.001em;
+      }
+
+      .gjs-dashed *[data-gjs-highlightable] {
+        outline: 1px dashed rgba(170,170,170,0.7);
+        outline-offset: -2px;
+      }
+
+      .gjs-selected {
+        outline: 2px solid #3b97e3 !important;
+        outline-offset: -2px;
+      }
+
+      .gjs-selected-parent {
+        outline: 2px solid #ffca6f !important
+      }
+
+      .gjs-no-select {
+        user-select: none;
+        -webkit-user-select:none;
+        -moz-user-select: none;
+      }
+
+      .gjs-freezed {
+        opacity: 0.5;
+        pointer-events: none;
+      }
+
+      .gjs-no-pointer {
+        pointer-events: none;
+      }
+
+      .gjs-pointer-init {
+        pointer-events: initial;
+      }
+
+      .gjs-plh-image {
+        background: #f5f5f5;
+        border: none;
+        height: 100px;
+        width: 100px;
+        display: block;
+        outline: 3px solid #ffca6f;
+        cursor: pointer;
+        outline-offset: -2px
+      }
+
+      .gjs-grabbing {
+        cursor: grabbing;
+        cursor: -webkit-grabbing;
+      }
+
+      .gjs-is__grabbing {
+        overflow-x: hidden;
+      }
+
+      .gjs-is__grabbing,
+      .gjs-is__grabbing * {
+        cursor: grabbing !important;
+      }
+
       
+      * { box-sizing: border-box; } body {margin: 0;}
+    
+
+
 
         * {
             margin: 0;
@@ -2117,12 +2195,6 @@
     .editor-container { height: 100vh; }
     p, h3, div { line-height: 1.6; }
   
-
-        .gjs-cv-unscale { scale: 1 }
-      
-
-        .cv-unscale { scale: 1 }
-      
 .lf-progress {
   -webkit-appearance: none;
   -moz-apperance: none;
@@ -2358,86 +2430,14 @@
 }
 
 
-      
-    body { background-color: #fff }
-    * ::-webkit-scrollbar-track { background: rgba(0, 0, 0, 0.1) }
-    * ::-webkit-scrollbar-thumb { background: rgba(255, 255, 255, 0.2) }
-    * ::-webkit-scrollbar { width: 10px }
-  
-
+        .gjs-cv-unscale { scale: 1 }
       
 
-      [data-gjs-type="wrapper"] {
-        min-height: 100vh;
-        padding-top: 0.001em;
-      }
-
-      .gjs-dashed *[data-gjs-highlightable] {
-        outline: 1px dashed rgba(170,170,170,0.7);
-        outline-offset: -2px;
-      }
-
-      .gjs-selected {
-        outline: 2px solid #3b97e3 !important;
-        outline-offset: -2px;
-      }
-
-      .gjs-selected-parent {
-        outline: 2px solid #ffca6f !important
-      }
-
-      .gjs-no-select {
-        user-select: none;
-        -webkit-user-select:none;
-        -moz-user-select: none;
-      }
-
-      .gjs-freezed {
-        opacity: 0.5;
-        pointer-events: none;
-      }
-
-      .gjs-no-pointer {
-        pointer-events: none;
-      }
-
-      .gjs-pointer-init {
-        pointer-events: initial;
-      }
-
-      .gjs-plh-image {
-        background: #f5f5f5;
-        border: none;
-        height: 100px;
-        width: 100px;
-        display: block;
-        outline: 3px solid #ffca6f;
-        cursor: pointer;
-        outline-offset: -2px
-      }
-
-      .gjs-grabbing {
-        cursor: grabbing;
-        cursor: -webkit-grabbing;
-      }
-
-      .gjs-is__grabbing {
-        overflow-x: hidden;
-      }
-
-      .gjs-is__grabbing,
-      .gjs-is__grabbing * {
-        cursor: grabbing !important;
-      }
-
-      
-      * { box-sizing: border-box; } body {margin: 0;}
-    
-
-</style> 
+        .cv-unscale { scale: 1 }
+      </style> 
 </head>
 <body>
-  <body><header class="header"><div class="container"><div class="header-content"><div class="logo"><div class="logo-icon"><i class="fas fa-brain"></i></div><span class="logo-text">WLW </span></div><div class="header-badge"><i class="fas fa-lock"></i><span>Confidentiel</span></div></div></div></header><section class="hero"><div class="container"><div class="hero-grid"><div class="hero-content"><div class="hero-badge"><i class="fas fa-sparkles"></i><span>Diagnostic IA </span></div><h1 class="hero-title">Plan d'Adoption <span class="accent">V4</span></h1><div id="company-display" class="company-name">Capegemmini</div><p class="hero-description">Transformation digitale intelligente propulsée par l'IA</p></div><div class="hero-visual"><div class="visual-orb"><div class="orb-ring"></div><div class="orb-ring"></div><div class="orb-core"><i class="fas fa-rocket"></i></div></div></div></div></div></section><main class="main"><div class="container"><section class="section"><div class="section-header"><h2 class="section-title">Analyse de l'entreprise</h2></div><div class="cards-grid"><div class="card featured"><div class="card-content"><h3 class="card-title">État de l'entreprise</h3><p id="etat-entreprise">Capegemmini, fondée en 2004, est une PME localisée en Afrique, spécialisée dans les services IT. L'entreprise compte 20 employés et génère un chiffre d'affaires de 2 000 000 euros. Elle propose principalement des services de création de sites web et d'agents. Ses partenaires stratégiques incluent CIH, Euraphrique, et Orange. La structure est relativement informelle, avec un environnement flexible et un accent sur la formation continue.</p></div></div><div class="card"><div class="card-content"><h3 class="card-title">Etat de l'Entreprise</h3><p id="secteur-activite">Capegemmini, fondée en 2004, est une PME localisée en Afrique, spécialisée dans les services IT. L'entreprise compte 20 employés et génère un chiffre d'affaires de 2 000 000 euros. Elle propose principalement des services de création de sites web et d'agents. Ses partenaires stratégiques incluent CIH, Euraphrique, et Orange. La structure est relativement informelle, avec un environnement flexible et un accent sur la formation continue.</p></div></div><div class="card"><div class="card-content"><h3 class="card-title">Positionnement</h3><p id="positionnement">Capegemmini se positionne sur le marché IT africain, ciblant principalement les PME qui cherchent à moderniser leurs processus et à améliorer leur présence en ligne. L'entreprise se différencie par son approche personnalisée et son réactivité face aux besoins spécifiques de ses clients.</p></div></div><div class="card"><div class="card-content"><h3 class="card-title">Enjeux critiques</h3><p id="enjeux">Les principaux défis incluent la digitalisation rapide de l'offre pour rester compétitifs, le manque de ressources techniques internes, et la nécessité de structurer une stratégie numérique cohérente.</p></div></div><div class="card"><div class="card-content"><h3 class="card-title">Besoins identifiés</h3><p id="besoins">Capegemmini a besoin de compétences techniques supplémentaires, d'outils numériques intégrés (comme un CRM avancé et un système de facturation automatisé), et d'une culture numérique renforcée parmi ses employés.</p></div></div></div></section><section class="section"><div class="section-header"><h2 class="section-title">Vision stratégique</h2></div><div class="strategy-grid"><div class="strategy-card"><h3>Mission</h3><p id="mission">Offrir des solutions IT innovantes et accessibles qui aident les PME à tirer parti du digital pour améliorer leur compétitivité et leur efficacité.</p></div><div class="strategy-card"><h3>Vision</h3><p id="vision">Devenir un acteur de référence dans le secteur IT en Afrique, reconnu pour ses solutions digitales intégrées et son accompagnement personnalisé des PME dans leur transformation numérique.</p></div><div class="strategy-card"><h3>Signature</h3><p id="signature-strategique">Capegemmini se distingue par son engagement à écouter et à adapter ses solutions aux besoins uniques de chaque client, garantissant une approche sur-mesure et une forte réactivité.</p></div><div class="strategy-card full"><h3>Objectifs stratégiques</h3><div id="objectifs">À court terme, Capegemmini vise à améliorer sa visibilité en ligne, optimiser ses processus internes et renforcer l'engagement de son équipe. À moyen terme, l'accent sera mis sur l'augmentation de la part de marché et le développement de nouveaux services digitaux. À long terme, l'objectif est de devenir une référence nationale dans le secteur IT.</div></div></div></section><section class="section"><div class="section-header"><h2 class="section-title">Analyse SWOT</h2></div><div class="swot-grid"><div class="swot-card"><h3>Forces</h3><p id="forces">Capegemmini bénéficie d'une équipe motivée, d'une forte capacité d'écoute client, et d'une flexibilité organisationnelle qui lui permet de s'adapter rapidement aux besoins du marché.</p></div><div class="swot-card"><h3>Faiblesses</h3><p id="faiblesses">Les processus internes non formalisés et la gestion en silo des outils numériques sont des faiblesses actuelles qui freinent l'efficacité opérationnelle.</p></div><div class="swot-card"><h3>Opportunités</h3><p id="opportunites">L'essor des technologies digitales en Afrique offre à Capegemmini l'opportunité de se positionner comme leader dans l'accompagnement des PME locales vers la transformation numérique.</p></div><div class="swot-card"><h3>Menaces</h3><p id="menaces">La concurrence croissante de sociétés mieux établies avec une visibilité en ligne plus forte et des offres plus claires constitue une menace pour Capegemmini.</p></div></div></section><section class="section"><div class="section-header"><h2 class="section-title">Plan d'action</h2></div><div class="recommendations"><div id="recommendations-list">Il est recommandé de prioriser la refonte du site web pour améliorer l'expérience utilisateur, de mettre en place un CRM robuste pour la gestion client, et d'automatiser les processus internes clés. Investir dans la formation des employés pour combler les lacunes techniques est également crucial.</div></div></section><section class="section"><div class="section-header"><h2 class="section-title">Profils clients</h2></div><div id="personas-grid" class="personas-grid"><div class="persona-card"><div class="persona-header"><div class="persona-avatar"><i class="fas fa-user"></i></div><div class="persona-name">Jean Dupont</div><div class="persona-role">Directeur Général</div></div><div class="persona-body"><div class="persona-info"><div class="info-item"><div class="info-label">Secteur</div><div class="info-value">Commerce de détail</div></div><div class="info-item"><div class="info-label">Entreprise</div><div class="info-value">Boutique Local</div></div><div class="info-item"><div class="info-label">CA</div><div class="info-value">500 000 €</div></div><div class="info-item"><div class="info-label">Taille</div><div class="info-value">10 employés</div></div></div><div class="persona-section"><div class="section-title"><i class="fas fa-bullseye"></i> Objectifs</div><div class="section-content">Améliorer la présence en ligne de son entreprise pour augmenter les ventes.</div></div><div class="persona-section"><div class="section-title"><i class="fas fa-bug"></i> Douleurs</div><div class="section-content">Manque de temps pour s'occuper de la transformation numérique et peur des coûts impliqués.</div></div><div class="persona-section"><div class="section-title"><i class="fas fa-rocket"></i> Besoins</div><div class="section-content">Digitaliser ses processus pour gagner en efficacité et attirer plus de clients en ligne.</div></div><div class="persona-section"><div class="section-title"><i class="fas fa-network-wired"></i> Comportements</div><div class="section-content">Utilise LinkedIn pour réseauter, lit des newsletters sur le commerce digital, participe à des webinaires sur la transformation numérique.</div></div></div></div><div class="persona-card"><div class="persona-header"><div class="persona-avatar"><i class="fas fa-user"></i></div><div class="persona-name">Fatou Ndiaye</div><div class="persona-role">Responsable Marketing</div></div><div class="persona-body"><div class="persona-info"><div class="info-item"><div class="info-label">Secteur</div><div class="info-value">Services financiers</div></div><div class="info-item"><div class="info-label">Entreprise</div><div class="info-value">FinTech Afrique</div></div><div class="info-item"><div class="info-label">CA</div><div class="info-value">1 000 000 €</div></div><div class="info-item"><div class="info-label">Taille</div><div class="info-value">50 employés</div></div></div><div class="persona-section"><div class="section-title"><i class="fas fa-bullseye"></i> Objectifs</div><div class="section-content">Augmenter l'engagement sur les réseaux sociaux et améliorer le taux de conversion du site web.</div></div><div class="persona-section"><div class="section-title"><i class="fas fa-bug"></i> Douleurs</div><div class="section-content">Difficulté à suivre les dernières tendances numériques et à les appliquer efficacement.</div></div><div class="persona-section"><div class="section-title"><i class="fas fa-rocket"></i> Besoins</div><div class="section-content">Développer une stratégie marketing numérique pour accroître la notoriété de la marque.</div></div><div class="persona-section"><div class="section-title"><i class="fas fa-network-wired"></i> Comportements</div><div class="section-content">Active sur LinkedIn, participe à des conférences digitales et utilise des outils d'analytique pour suivre les performances marketing.</div></div></div></div></div></section><section class="section"><div class="section-header"><h2 class="section-title">Analyse Web Client</h2></div><div class="web-analysis-grid"><div class="web-analysis-card"><h3>Performance du Site</h3><p id="web-performance">70%</p></div><div class="web-analysis-card"><h3> SEO</h3><p id="web-seo">65%</p></div><div class="web-analysis-card"><h3>Expérience UX</h3><p id="web-ux">Le site web présente une navigation relativement intuitive mais pourrait bénéficier d'une meilleure optimisation pour les appareils mobiles et d'une accessibilité renforcée.</p></div></div></section><section class="section"><div class="section-header"><h2 class="section-title">Conclusion stratégique</h2></div><div class="conclusion-container"><div class="conclusion-card"><div class="conclusion-content"><h3>Synthèse</h3><p id="conclusion-text">Capegemmini doit impérativement structurer sa stratégie numérique pour capitaliser sur ses forces et combler ses faiblesses. Un plan d'action en plusieurs phases permettra d'atteindre progressivement les objectifs fixés tout en maîtrisant les coûts et en impliquant l'ensemble de l'équipe. La transformation numérique n'est pas seulement un choix, mais une nécessité pour se maintenir compétitif.</p></div></div></div></section></div></main><footer class="footer"><div class="container"><div class="footer-content"><div class="footer-left"><span class="footer-copyright">
+  <body><header class="header"><div class="container"><div class="header-content"><div class="logo"><div class="logo-icon"><i class="fas fa-brain"></i></div><span class="logo-text">WLW </span></div><div class="header-badge"><i class="fas fa-lock"></i><span>Confidentiel</span></div></div></div></header><section class="hero"><div class="container"><div class="hero-grid"><div class="hero-content"><div class="hero-badge"><i class="fas fa-sparkles"></i><span>Diagnostic IA </span></div><h1 class="hero-title">Plan d'Adoption <span class="accent">HHH</span></h1><div id="company-display" class="company-name">Capegemmini</div><p class="hero-description">Transformation digitale intelligente propulsée par l'IA</p></div><div class="hero-visual"><div class="visual-orb"><div class="orb-ring"></div><div class="orb-ring"></div><div class="orb-core"><i class="fas fa-rocket"></i></div></div></div></div></div></section><main class="main"><div class="container"><section class="section"><div class="section-header"><h2 class="section-title">Analyse de l'entreprise</h2></div><div class="cards-grid"><div class="card featured"><div class="card-content"><h3 class="card-title">État de l'entreprise</h3><p id="etat-entreprise">Capegemmini, fondée en 2004, est une PME basée en Afrique, spécialisée dans le secteur IT. Avec un chiffre d'affaires actuel de 2 000 000 euros et une équipe de 20 personnes, l'entreprise se concentre principalement sur la création de sites web et la fourniture de services d'agents. Les partenaires stratégiques incluent CIH, Euraphrique, et Orange. L'entreprise s'efforce d'être flexible et à l'écoute de ses employés, tout en offrant des possibilités de formation.</p></div></div><div class="card"><div class="card-content"><h3 class="card-title">Etat de l'Entreprise</h3><p id="secteur-activite">Capegemmini, fondée en 2004, est une PME basée en Afrique, spécialisée dans le secteur IT. Avec un chiffre d'affaires actuel de 2 000 000 euros et une équipe de 20 personnes, l'entreprise se concentre principalement sur la création de sites web et la fourniture de services d'agents. Les partenaires stratégiques incluent CIH, Euraphrique, et Orange. L'entreprise s'efforce d'être flexible et à l'écoute de ses employés, tout en offrant des possibilités de formation.</p></div></div><div class="card"><div class="card-content"><h3 class="card-title">Positionnement</h3><p id="positionnement">Capegemmini se positionne sur le marché IT en ciblant les PME désireuses de se digitaliser. Son différenciateur majeur est l'approche personnalisée et réactive, adaptée aux dirigeants souvent peu familiarisés avec les outils numériques.</p></div></div><div class="card"><div class="card-content"><h3 class="card-title">Enjeux critiques</h3><p id="enjeux">Les principaux défis incluent l'amélioration de la visibilité en ligne, l'optimisation des processus internes, et la digitalisation rapide de l'offre pour rester compétitif. Le manque de compétences techniques internes et le temps limité pour les projets numériques représentent également des défis.</p></div></div><div class="card"><div class="card-content"><h3 class="card-title">Besoins identifiés</h3><p id="besoins">Capegemmini a besoin d'outils intégrés pour éviter les silos, de compétences techniques accrues, et d'une meilleure culture numérique pour soutenir les projets de digitalisation. Une plateforme LMS et des solutions de sécurité renforcées sont également nécessaires.</p></div></div></div></section><section class="section"><div class="section-header"><h2 class="section-title">Vision stratégique</h2></div><div class="strategy-grid"><div class="strategy-card"><h3>Mission</h3><p id="mission">Offrir des solutions numériques innovantes qui aident les PME à se digitaliser efficacement, en restant à l'écoute des besoins spécifiques de chaque client pour garantir des résultats concrets et adaptés.</p></div><div class="strategy-card"><h3>Vision</h3><p id="vision">Devenir la référence nationale dans le secteur IT pour les PME cherchant à se digitaliser, en développant des services innovants et une présence en ligne robuste qui renforcent notre position sur le marché.</p></div><div class="strategy-card"><h3>Signature</h3><p id="signature-strategique">Capegemmini se distingue par son engagement à fournir des solutions simples et concrètes, alliant écoute active et réactivité pour accompagner ses clients dans leur transformation numérique.</p></div><div class="strategy-card full"><h3>Objectifs stratégiques</h3><div id="objectifs">À court terme, refondre le site web pour améliorer l'expérience utilisateur et mettre en place un CRM performant. À moyen terme, automatiser les tâches internes et renforcer la visibilité sur les réseaux sociaux. À long terme, lancer une boutique en ligne pour diversifier les canaux de vente.</div></div></div></section><section class="section"><div class="section-header"><h2 class="section-title">Analyse SWOT</h2></div><div class="swot-grid"><div class="swot-card"><h3>Forces</h3><p id="forces">Flexibilité et approche personnalisée centrée sur le client. Environnement de travail flexible et propice à l'innovation et à l'amélioration continue.</p></div><div class="swot-card"><h3>Faiblesses</h3><p id="faiblesses">Manque de stratégie marketing claire et de documentation des processus internes. Les outils numériques actuels fonctionnent en silos, ce qui entraîne des inefficacités.</p></div><div class="swot-card"><h3>Opportunités</h3><p id="opportunites">Le marché IT pour les PME est en croissance, avec une demande accrue pour la digitalisation. Capegemmini peut capitaliser sur sa flexibilité et sa capacité d'écoute pour se différencier des concurrents et développer de nouveaux services digitaux.</p></div><div class="swot-card"><h3>Menaces</h3><p id="menaces">La concurrence accrue avec des entreprises ayant une meilleure visibilité en ligne et des offres plus packagées. Le manque de ressources internes pour suivre le rythme rapide de l'évolution technologique pose également un risque.</p></div></div></section><section class="section"><div class="section-header"><h2 class="section-title">Plan d'action</h2></div><div class="recommendations"><div id="recommendations-list">Prioriser la refonte du site web et l'intégration d'un CRM. Développer une stratégie de contenu pour les réseaux sociaux. Investir dans la formation des équipes pour combler les lacunes techniques. Mettre en place des solutions de sécurité et une politique de cybersécurité formalisée.</div></div></section><section class="section"><div class="section-header"><h2 class="section-title">Profils clients</h2></div><div id="personas-grid" class="personas-grid"><div class="persona-card"><div class="persona-header"><div class="persona-avatar"><i class="fas fa-user"></i></div><div class="persona-name">Jean Dupont</div><div class="persona-role">Directeur Général</div></div><div class="persona-body"><div class="persona-info"><div class="info-item"><div class="info-label">Secteur</div><div class="info-value">Commerce de détail</div></div><div class="info-item"><div class="info-label">Entreprise</div><div class="info-value">Boutique Excellence</div></div><div class="info-item"><div class="info-label">CA</div><div class="info-value">3 500 000</div></div><div class="info-item"><div class="info-label">Taille</div><div class="info-value">35</div></div></div><div class="persona-section"><div class="section-title"><i class="fas fa-bullseye"></i> Objectifs</div><div class="section-content">Optimiser les processus internes, développer une stratégie numérique claire, et fidéliser la clientèle existante.</div></div><div class="persona-section"><div class="section-title"><i class="fas fa-bug"></i> Douleurs</div><div class="section-content">Manque de temps pour gérer les processus numériques, difficulté à suivre les tendances technologiques.</div></div><div class="persona-section"><div class="section-title"><i class="fas fa-rocket"></i> Besoins</div><div class="section-content">Digitaliser les opérations, améliorer la visibilité en ligne, et augmenter les ventes par le biais du marketing numérique.</div></div><div class="persona-section"><div class="section-title"><i class="fas fa-network-wired"></i> Comportements</div><div class="section-content">Utilise LinkedIn pour le réseautage, s'abonne à des newsletters spécialisées en commerce, et participe à des événements en ligne sur la digitalisation.</div></div></div></div><div class="persona-card"><div class="persona-header"><div class="persona-avatar"><i class="fas fa-user"></i></div><div class="persona-name">Marie Leblanc</div><div class="persona-role">Responsable Marketing</div></div><div class="persona-body"><div class="persona-info"><div class="info-item"><div class="info-label">Secteur</div><div class="info-value">Tourisme</div></div><div class="info-item"><div class="info-label">Entreprise</div><div class="info-value">Voyages et Découvertes</div></div><div class="info-item"><div class="info-label">CA</div><div class="info-value">5 000 000</div></div><div class="info-item"><div class="info-label">Taille</div><div class="info-value">50</div></div></div><div class="persona-section"><div class="section-title"><i class="fas fa-bullseye"></i> Objectifs</div><div class="section-content">Augmenter le taux de conversion en ligne, développer des campagnes marketing ciblées, et renforcer l'engagement client.</div></div><div class="persona-section"><div class="section-title"><i class="fas fa-bug"></i> Douleurs</div><div class="section-content">Difficulté à justifier les investissements numériques, fragmentation des outils de gestion.</div></div><div class="persona-section"><div class="section-title"><i class="fas fa-rocket"></i> Besoins</div><div class="section-content">Améliorer la communication en ligne, accroître la présence sur les réseaux sociaux, et intégrer un CRM pour une meilleure gestion des clients.</div></div><div class="persona-section"><div class="section-title"><i class="fas fa-network-wired"></i> Comportements</div><div class="section-content">Active sur Instagram et Facebook pour des campagnes, suit des webinaires sur les nouvelles tendances marketing, et utilise Google Analytics pour le suivi des performances.</div></div></div></div></div></section><section class="section"><div class="section-header"><h2 class="section-title">Analyse Web Client</h2></div><div class="web-analysis-grid"><div class="web-analysis-card"><h3>Performance du Site</h3><p id="web-performance">70%</p></div><div class="web-analysis-card"><h3> SEO</h3><p id="web-seo">65%</p></div><div class="web-analysis-card"><h3>Expérience UX</h3><p id="web-ux">La navigation sur le site est intuitive, mais certains éléments ne sont pas suffisamment accessibles, ce qui peut nuire à l'expérience utilisateur.</p></div></div></section><section class="section"><div class="section-header"><h2 class="section-title">Conclusion stratégique</h2></div><div class="conclusion-container"><div class="conclusion-card"><div class="conclusion-content"><h3>Synthèse</h3><p id="conclusion-text">Capegemmini doit concentrer ses efforts sur la modernisation de son infrastructure numérique et l'amélioration de sa présence en ligne pour atteindre ses objectifs de croissance. En investissant dans des outils intégrés, en renforçant ses compétences internes, et en définissant des processus clairs, Capegemmini pourra non seulement accroître son efficacité, mais aussi sa part de marché. La transformation en plusieurs phases permettra une adoption progressive et une meilleure gestion du changement.</p></div></div></div></section></div></main><footer class="footer"><div class="container"><div class="footer-content"><div class="footer-left"><span class="footer-copyright">
                             © 2025 wlw. Tous droits réservés.
                         </span></div><div class="footer-right"><span id="footer-date" class="footer-report-date"></span></div></div></div></footer></body>
 </body>
