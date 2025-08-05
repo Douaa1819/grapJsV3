@@ -1,0 +1,1209 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <title>Plan d'Adoption Numérique - Édition</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+  
+
+  <link href="https://unpkg.com/grapesjs/dist/css/grapes.min.css" rel="stylesheet"/>
+
+
+  
+ <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        :root {
+            --white: #ffffff;
+            --accent: #92b9e8; 
+            --gray-50: #f8f8f8; 
+            --gray-100: #f0f0f0; 
+            --gray-200: #e0e0e0; 
+            --gray-700: #4a4a4a; 
+            --gray-800: #2c2c2c; 
+
+          
+            --space-xs: 0.5rem;
+            --space-sm: 1rem;
+            --space-md: 1.5rem;
+            --space-lg: 2rem;
+            --space-xl: 3rem;
+            --space-2xl: 4rem;
+            --radius-sm: 8px;
+            --radius-md: 16px;
+            --radius-lg: 24px;
+            --radius-xl: 32px;
+
+            --shadow-sm: 0 1px 4px rgba(0, 0, 0, 0.03);
+            --shadow-md: 0 2px 10px rgba(0, 0, 0, 0.06);
+            --shadow-lg: 0 4px 20px rgba(0, 0, 0, 0.09);
+
+            --transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: "Inter", -apple-system, BlinkMacSystemFont, sans-serif;
+            line-height: 1.6;
+            color: var(--gray-700); 
+            background: var(--white);
+            overflow-x: hidden;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 var(--space-md);
+        }
+
+        .header {
+            background: var(--white);
+            border-bottom: 1px solid var(--gray-100);
+            position: sticky;
+            top: 0;
+            z-index: 100;
+            backdrop-filter: blur(20px);
+            box-shadow: var(--shadow-sm);
+        }
+
+        .header-content {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            height: 70px;
+        }
+
+        .logo {
+            display: flex;
+            align-items: center;
+            gap: var(--space-sm);
+        }
+
+        .logo-icon {
+            width: 40px;
+            height: 40px;
+            background: var(--accent);
+            border-radius: var(--radius-sm);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: var(--white);
+            font-size: 1.2rem;
+        }
+
+        .logo-text {
+            font-size: 1.25rem;
+            font-weight: 700;
+            color: var(--gray-800);
+        }
+
+        .header-badge {
+            display: flex;
+            align-items: center;
+            gap: var(--space-xs);
+            padding: var(--space-xs) var(--space-sm);
+            background: var(--gray-50);
+            border-radius: var(--radius-sm);
+            font-size: 0.875rem;
+            color: var(--gray-700);
+            border: 1px solid var(--gray-100);
+        }
+
+        .hero {
+            background: var(--white); 
+            padding: var(--space-2xl) 0;
+        }
+
+        .hero-grid {
+            display: grid;
+            grid-template-columns: 1fr 300px;
+            gap: var(--space-2xl);
+            align-items: center;
+        }
+
+        .hero-badge {
+            display: inline-flex;
+            align-items: center;
+            gap: var(--space-xs);
+            padding: var(--space-xs) var(--space-md);
+            background: var(--gray-100);
+            color: var(--gray-700);
+            border-radius: var(--radius-lg);
+            font-size: 0.875rem;
+            font-weight: 600;
+            margin-bottom: var(--space-md);
+            animation: fadeInUp 0.6s ease 0.2s both;
+            border: 1px solid var(--gray-200);
+        }
+
+        .hero-badge i {
+            color: var(--accent); 
+        }
+
+        .hero-title {
+            font-size: 3.5rem;
+            font-weight: 800;
+            line-height: 1.1;
+            margin-bottom: var(--space-sm);
+            animation: fadeInUp 0.6s ease 0.4s both;
+            color: var(--gray-800);
+        }
+
+        .accent {
+            color: var(--accent); 
+        }
+
+        .company-name {
+            font-size: 1.5rem;
+            font-weight: 600;
+            color: var(--gray-700);
+            margin-bottom: var(--space-md);
+            animation: fadeInUp 0.6s ease 0.6s both;
+        }
+
+        .hero-description {
+            font-size: 1.125rem;
+            color: var(--gray-700);
+            animation: fadeInUp 0.6s ease 0.8s both;
+        }
+
+
+        .hero-visual {
+            position: relative;
+            height: 300px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .visual-orb {
+            position: relative;
+            width: 150px;
+            height: 150px;
+            animation: fadeInUp 0.8s ease 1s both;
+        }
+
+        .orb-ring {
+            position: absolute;
+            inset: 0;
+            border: 2px solid var(--gray-200); 
+            border-radius: 50%;
+            opacity: 0.6;
+            animation: pulse 3s ease-in-out infinite;
+        }
+
+        .orb-ring:nth-child(2) {
+            animation-delay: 1s;
+            transform: scale(1.2);
+        }
+        .gjs-custom-btn {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  background-color: #92b9e8;
+  color: #ffffff;
+  padding: 12px 20px;
+  border: none;
+  border-radius: 8px;
+  font-size: 16px;
+  font-weight: 600;
+  font-family: "Inter", sans-serif;
+  cursor: pointer;
+  z-index: 9999;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+  transition: all 0.3s ease;
+}
+
+.gjs-custom-btn:hover {
+  background-color: #111111;
+  transform: translateY(-2px);
+  box-shadow: 0 6px 14px rgba(0, 0, 0, 0.25);
+}
+
+
+        .orb-core {
+            position: absolute;
+            inset: 20px;
+            background: var(--accent); 
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: var(--white);
+            font-size: 2rem;
+            animation: float 4s ease-in-out infinite;
+        }
+
+        
+        .main {
+            padding: var(--space-2xl) 0;
+        }
+
+        .section {
+            display: block; 
+            margin-bottom: var(--space-2xl);
+            animation: fadeIn 0.5s ease;
+        }
+
+    .section-header {
+        text-align: center;
+        margin-bottom: var(--space-2xl);
+        }
+
+        
+
+
+        .cards-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: var(--space-lg);
+        }
+
+        .card {
+            background: var(--white);
+            border-radius: var(--radius-lg);
+            overflow: hidden;
+            box-shadow: var(--shadow-sm);
+            transition: var(--transition);
+            animation: slideInUp 0.6s ease both;
+            border: 1px solid var(--gray-100); 
+        }
+
+        .card:hover {
+            transform: translateY(-4px);
+            box-shadow: var(--shadow-md);
+        }
+
+        .card.featured {
+            grid-column: 1 / -1;
+        }
+
+        .card-image {
+            position: relative;
+            height: 150px;
+            overflow: hidden;
+        }
+
+        .card.featured .card-image {
+            height: 200px;
+        }
+
+        .card-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: var(--transition);
+        }
+
+        .card:hover .card-image img {
+            transform: scale(1.03);
+        }
+
+        .card-overlay {
+            position: absolute;
+            top: var(--space-sm);
+            right: var(--space-sm);
+            width: 40px;
+            height: 40px;
+            background: rgba(146, 185, 232, 0.7); 
+            border-radius: var(--radius-sm);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: var(--white);
+            font-size: 1.1rem;
+        }
+
+        .card-content {
+            padding: var(--space-lg);
+        }
+
+        .card-title {
+            font-size: 1.25rem;
+            font-weight: 700;
+            color: var(--gray-800); 
+            margin-bottom: var(--space-sm);
+        }
+
+        .card-text {
+            color: var(--gray-700);
+            line-height: 1.6;
+        }
+
+        /* Strategy Grid */
+        .strategy-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: var(--space-lg);
+        }
+
+        .strategy-card {
+            background: var(--white);
+            border-radius: var(--radius-lg);
+            padding: var(--space-xl);
+            text-align: center;
+            box-shadow: var(--shadow-sm);
+            transition: var(--transition);
+            animation: slideInUp 0.6s ease both;
+            border: 1px solid var(--gray-100); /* Bordure subtile */
+        }
+
+        .strategy-card:hover {
+            transform: translateY(-4px);
+            box-shadow: var(--shadow-md);
+        }
+
+        .strategy-card.full {
+            grid-column: 1 / -1;
+            text-align: left;
+        }
+
+        .strategy-icon {
+            width: 60px;
+            height: 60px;
+            background: var(--accent); /* Nouveau bleu pour les icônes de stratégie */
+            border-radius: var(--radius-md);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto var(--space-md);
+            color: var(--white);
+            font-size: 1.5rem;
+        }
+
+        .strategy-card.full .strategy-icon {
+            margin: 0 0 var(--space-md) 0;
+        }
+
+        .strategy-card h3 {
+            font-size: 1.25rem;
+            font-weight: 700;
+            color: var(--gray-800);
+            margin-bottom: var(--space-sm);
+        }
+
+        .strategy-card p {
+            color: var(--gray-700);
+            line-height: 1.6;
+        }
+
+        /* SWOT Grid */
+        .swot-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: var(--space-lg);
+            max-width: 900px;
+            margin: 0 auto;
+        }
+
+        .swot-card {
+            background: var(--white);
+            border-radius: var(--radius-lg);
+            padding: var(--space-xl);
+            box-shadow: var(--shadow-sm);
+            transition: var(--transition);
+            animation: slideInUp 0.6s ease both;
+            border: 1px solid var(--gray-100); /* Bordure subtile */
+        }
+
+        .swot-card:hover {
+            transform: translateY(-4px);
+            box-shadow: var(--shadow-md);
+        }
+
+        .swot-card.positive {
+            border-left: 4px solid var(--accent); 
+        }
+
+        .swot-card.negative {
+            border-left: 4px solid var(--gray-800); 
+        }
+
+        .swot-header {
+            display: flex;
+            align-items: center;
+            gap: var(--space-sm);
+            margin-bottom: var(--space-md);
+        }
+
+        .swot-header i {
+            font-size: 1.25rem;
+            color: var(--accent); 
+        }
+
+        .swot-header h3 {
+            font-size: 1.25rem;
+            font-weight: 700;
+            color: var(--gray-800);
+        }
+
+        .swot-card p {
+            color: var(--gray-700);
+            line-height: 1.6;
+        }
+
+        .recommendations {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .recommendation-item {
+            background: var(--white);
+            border-radius: var(--radius-lg);
+            padding: var(--space-lg);
+            margin-bottom: var(--space-md);
+            box-shadow: var(--shadow-sm);
+            display: flex;
+            align-items: flex-start;
+            gap: var(--space-md);
+            transition: var(--transition);
+            animation: slideInUp 0.6s ease both;
+            border: 1px solid var(--gray-100); /* Bordure subtile */
+        }
+
+        .recommendation-item:hover {
+            transform: translateX(4px);
+            box-shadow: var(--shadow-md);
+        }
+
+        .recommendation-number {
+            width: 40px;
+            height: 40px;
+            background: var(--accent); /* Nouveau bleu pour les numéros */
+            color: var(--white);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: 700;
+            flex-shrink: 0;
+        }
+
+        .recommendation-content p {
+            color: var(--gray-700);
+            line-height: 1.6;
+        }
+
+        /* Personas */
+        .personas-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: var(--space-xl);
+        }
+
+        .persona-card {
+            background: var(--white);
+            border-radius: var(--radius-xl);
+            overflow: hidden;
+            box-shadow: var(--shadow-md);
+            transition: var(--transition);
+            animation: slideInUp 0.6s ease both;
+            border: 1px solid var(--gray-100); /* Bordure subtile */
+        }
+
+        .persona-card:hover {
+            transform: translateY(-4px);
+            box-shadow: var(--shadow-lg);
+        }
+
+        .persona-header {
+            background: var(--accent); /* Nouveau bleu pour l'en-tête du persona */
+            color: var(--white);
+            padding: var(--space-xl);
+            text-align: center;
+        }
+
+        .persona-avatar {
+            width: 80px;
+            height: 80px;
+            background: rgba(255, 255, 255, 0.1); /* Très léger blanc transparent */
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: var(--white);
+            font-size: 2rem;
+        }
+
+        .persona-name {
+            font-size: 1.25rem;
+            font-weight: 700;
+            margin-bottom: var(--space-xs);
+        }
+
+        .persona-role {
+            opacity: 0.9;
+        }
+
+        .persona-body {
+            padding: var(--space-xl);
+        }
+
+        .persona-info {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: var(--space-sm);
+            margin-bottom: var(--space-lg);
+        }
+
+        .info-item {
+            background: var(--gray-50);
+            padding: var(--space-sm);
+            border-radius: var(--radius-sm);
+            text-align: center;
+            border: 1px solid var(--gray-100);
+        }
+
+        .info-label {
+            font-size: 0.75rem;
+            color: var(--gray-700);
+            text-transform: uppercase;
+            font-weight: 600;
+            margin-bottom: var(--space-xs);
+        }
+
+        .info-value {
+            font-weight: 600;
+            color: var(--gray-800); 
+            font-size: 0.875rem;
+        }
+
+        .persona-section {
+            margin-bottom: var(--space-md);
+        }
+
+        .persona-section:last-child {
+            margin-bottom: 0;
+        }
+
+        .section-title {
+            display: flex;
+            align-items: center;
+            gap: var(--space-xs);
+            font-size: 1.5rem;
+            font-weight: 600;
+            color: var(--gray-700);
+            margin-bottom: var(--space-md);
+            animation: fadeInUp 0.6s ease 0.6s both;  
+            color: var(--gray-800); 
+            margin-bottom: var(--space-sm);
+    
+        }
+
+        .section-title i {
+            color: var(--accent); 
+            font-size: 0.875rem;
+        }
+
+        .section-content {
+            color: var(--gray-700);
+            line-height: 1.6;
+            font-size: 0.875rem;
+        }
+
+        /* Web Analysis Section */
+        .web-analysis-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: var(--space-lg);
+        }
+
+        .web-analysis-card {
+            background: var(--white);
+            border-radius: var(--radius-lg);
+            padding: var(--space-xl);
+            box-shadow: var(--shadow-sm);
+            transition: var(--transition);
+            animation: slideInUp 0.6s ease both;
+            text-align: center;
+            border: 1px solid var(--gray-100); /* Bordure subtile */
+        }
+
+        .web-analysis-card:hover {
+            transform: translateY(-4px);
+            box-shadow: var(--shadow-md);
+        }
+
+        .web-analysis-card .card-icon {
+            width: 60px;
+            height: 60px;
+            background: var(--accent); /* Nouveau bleu pour les icônes d'analyse web */
+            border-radius: var(--radius-md);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: var(--white);
+            font-size: 1.5rem;
+            margin: 0 auto var(--space-md);
+        }
+
+        .web-analysis-card .card-title {
+            font-size: 1.25rem;
+            font-weight: 700;
+            color: var(--gray-800);
+            margin-bottom: var(--space-sm);
+        }
+
+        .web-analysis-card p {
+            color: var(--gray-700);
+            line-height: 1.6;
+        }
+
+        /* Conclusion Section */
+        .conclusion-container {
+            max-width: 900px;
+            margin: 0 auto;
+        }
+
+        .conclusion-card {
+            background: var(--white); /* Fond blanc pur */
+            border: 1px solid var(--gray-200); /* Bordure gris clair */
+            border-radius: var(--radius-xl);
+            padding: var(--space-2xl);
+            display: flex;
+            align-items: flex-start;
+            gap: var(--space-lg);
+            box-shadow: var(--shadow-lg);
+            animation: slideInUp 0.6s ease both;
+        }
+
+        .conclusion-icon {
+            width: 80px;
+            height: 80px;
+            background: var(--accent); /* Nouveau bleu pour l'icône de conclusion */
+            border-radius: var(--radius-lg);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: var(--white);
+            font-size: 2rem;
+            flex-shrink: 0;
+        }
+
+        .conclusion-content h3 {
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: var(--gray-800);
+            margin-bottom: var(--space-md);
+        }
+
+        .conclusion-content p {
+            color: var(--gray-700);
+            line-height: 1.7;
+            font-size: 1.125rem;
+        }
+
+        /* Footer - Minimaliste wlw.it.com style */
+        .footer {
+            background: var(--white); /* Fond blanc */
+            color: var(--gray-700); /* Texte gris foncé */
+            padding: var(--space-lg) 0;
+            margin-top: var(--space-2xl);
+            border-top: 1px solid var(--gray-100); /* Bordure très fine */
+        }
+
+        .footer-content {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            font-size: 0.875rem;
+            color: var(--gray-700);
+        }
+
+        .footer-copyright {
+            opacity: 0.9;
+            font-weight: 500;
+        }
+
+        .footer-report-date {
+            opacity: 0.9;
+            font-weight: 500;
+        }
+
+        /* Animations */
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+            }
+            to {
+                opacity: 1;
+            }
+        }
+
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(20px); /* Moins de mouvement */
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        @keyframes slideInUp {
+            from {
+                opacity: 0;
+                transform: translateY(15px); /* Moins de mouvement */
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        @keyframes pulse {
+            0%,
+            100% {
+                opacity: 0.3;
+                transform: scale(1);
+            }
+            50% {
+                opacity: 0.6;
+                transform: scale(1.02); /* Moins d'amplitude */
+            }
+        }
+
+        @keyframes float {
+            0%,
+            100% {
+                transform: translateY(0px);
+            }
+            50% {
+                transform: translateY(-8px); /* Moins d'amplitude */
+            }
+        }
+
+        /* Objective Items */
+        .objective-item {
+            display: flex;
+            align-items: flex-start;
+            gap: var(--space-sm);
+            margin-bottom: var(--space-sm);
+            padding: var(--space-md);
+            background: var(--gray-50);
+            border-radius: var(--radius-sm);
+            transition: var(--transition);
+            border: 1px solid var(--gray-100);
+        }
+
+        .objective-item:hover {
+            background: var(--gray-100);
+        }
+
+        .objective-item i {
+            color: var(--accent); 
+            margin-top: 2px;
+            flex-shrink: 0;
+        }
+
+        .objective-item span {
+            color: var(--gray-700);
+            line-height: 1.6;
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .hero-grid {
+                grid-template-columns: 1fr;
+                text-align: center;
+            }
+
+            .hero-title {
+                font-size: 2.5rem;
+            }
+
+            .cards-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .strategy-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .swot-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .personas-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .web-analysis-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .nav-item span {
+                display: none;
+            }
+
+            .footer-content {
+                flex-direction: column;
+                gap: var(--space-sm);
+                text-align: center;
+            }
+
+            .conclusion-card {
+                flex-direction: column;
+                text-align: center;
+            }
+        }
+
+        /* Stagger animations */
+        .card:nth-child(1) {
+            animation-delay: 0.1s;
+        }
+        .card:nth-child(2) {
+            animation-delay: 0.2s;
+        }
+        .card:nth-child(3) {
+            animation-delay: 0.3s;
+        }
+        .card:nth-child(4) {
+            animation-delay: 0.4s;
+        }
+        .card:nth-child(5) {
+            animation-delay: 0.5s;
+        }
+
+        .strategy-card:nth-child(1) {
+            animation-delay: 0.1s;
+        }
+        .strategy-card:nth-child(2) {
+            animation-delay: 0.2s;
+        }
+        .strategy-card:nth-child(3) {
+            animation-delay: 0.3s;
+        }
+        .strategy-card:nth-child(4) {
+            animation-delay: 0.4s;
+        }
+
+        .swot-card:nth-child(1) {
+            animation-delay: 0.1s;
+        }
+        .swot-card:nth-child(2) {
+            animation-delay: 0.2s;
+        }
+        .swot-card:nth-child(3) {
+            animation-delay: 0.3s;
+        }
+        .swot-card:nth-child(4) {
+            animation-delay: 0.4s;
+        }
+
+        .recommendation-item:nth-child(1) {
+            animation-delay: 0.1s;
+        }
+        .recommendation-item:nth-child(2) {
+            animation-delay: 0.2s;
+        }
+        .recommendation-item:nth-child(3) {
+            animation-delay: 0.3s;
+        }
+        .recommendation-item:nth-child(4) {
+            animation-delay: 0.4s;
+        }
+        .recommendation-item:nth-child(5) {
+            animation-delay: 0.5s;
+        }
+        .recommendation-item:nth-child(6) {
+            animation-delay: 0.6s;
+        }
+
+        .persona-card:nth-child(1) {
+            animation-delay: 0.1s;
+        }
+        .persona-card:nth-child(2) {
+            animation-delay: 0.3s;
+        }
+        .persona-card:nth-child(3) {
+            animation-delay: 0.5s;
+        }
+
+        .web-analysis-card:nth-child(1) {
+            animation-delay: 0.1s;
+        }
+        .web-analysis-card:nth-child(2) {
+            animation-delay: 0.2s;
+        }
+        .web-analysis-card:nth-child(3) {
+            animation-delay: 0.3s;
+        }
+        .web-analysis-card:nth-child(4) {
+            animation-delay: 0.4s;
+        }
+    </style>
+
+
+  <style>
+    body, html { margin: 0; padding: 0; font-family: 'Inter', sans-serif; height: 100%; }
+    #gjs { height: 100%; overflow: auto; }
+    .editor-container { height: 100vh; }
+    p, h3, div { line-height: 1.6; }
+  </style>
+</head>
+<body>
+  <div class="editor-container">
+    <div id="gjs">
+      <header class="header">
+        <div class="container">
+          <div class="header-content">
+            <div class="logo">
+              <div class="logo-icon"><i class="fas fa-brain"></i></div>
+              <span class="logo-text">WLW </span>
+            </div>
+            <div class="header-badge">
+              <i class="fas fa-lock"></i><span>Confidentiel</span>
+            </div>
+          </div>
+        </div>
+      </header>
+
+      <section class="hero">
+        <div class="container">
+          <div class="hero-grid">
+            <div class="hero-content">
+              <div class="hero-badge"><i class="fas fa-sparkles"></i><span>Diagnostic IA </span></div>
+              <h1 class="hero-title">Plan d'Adoption <span class="accent">Numérique</span></h1>
+              <div class="company-name" id="company-display">Agrolia</div>
+              <p class="hero-description">Transformation digitale intelligente propulsée par l'IA</p>
+            </div>
+            <div class="hero-visual">
+              <div class="visual-orb">
+                <div class="orb-ring"></div>
+                <div class="orb-ring"></div>
+                <div class="orb-core"><i class="fas fa-rocket"></i></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <main class="main">
+        <div class="container">
+          <section class="section">
+            <div class="section-header"><h2 class="section-title">Analyse de l'entreprise</h2></div>
+            <div class="cards-grid">
+              <div class="card featured">
+                <div class="card-content">
+                  <h3 class="card-title">État de l'entreprise</h3>
+                  <p id="etat-entreprise">Agrolia, fondée en 2020, est une entreprise située à Meknès, Maroc, avec un chiffre d'affaires d'environ 1,1 million MAD. Elle emploie 9 personnes, dont 6 permanents et 3 consultants. Les principaux produits et services incluent une plateforme de mise en relation entre producteurs agricoles et distributeurs, des outils de traçabilité et de gestion de stock pour coopératives, ainsi qu'un accompagnement à la certification bio.</p>
+                </div>
+              </div>
+              <div class="card"><div class="card-content"><h3 class="card-title">Etat de l'Entreprise</h3><p id="secteur-activite">Agrolia, fondée en 2020, est une entreprise située à Meknès, Maroc, avec un chiffre d'affaires d'environ 1,1 million MAD. Elle emploie 9 personnes, dont 6 permanents et 3 consultants. Les principaux produits et services incluent une plateforme de mise en relation entre producteurs agricoles et distributeurs, des outils de traçabilité et de gestion de stock pour coopératives, ainsi qu'un accompagnement à la certification bio.</p></div></div>
+              <div class="card"><div class="card-content"><h3 class="card-title">Positionnement</h3><p id="positionnement">Agrolia se positionne sur le marché de l'AgriTech, ciblant principalement les petites coopératives agricoles et les distributeurs locaux avec des solutions spécialisées en agriculture.</p></div></div>
+              <div class="card"><div class="card-content"><h3 class="card-title">Enjeux critiques</h3><p id="enjeux">À court terme, l'enjeu principal est l'automatisation de la gestion des livraisons. À long terme, l'entreprise doit devenir une référence AgriTech au Maghreb et développer des partenariats avec les grandes surfaces.</p></div></div>
+              <div class="card"><div class="card-content"><h3 class="card-title">Besoins identifiés</h3><p id="besoins">Agrolia a un besoin urgent de développeurs front-end et DevOps pour améliorer ses ressources technologiques et assurer la digitalisation complète de ses processus.</p></div></div>
+            </div>
+          </section>
+
+          <section class="section">
+            <div class="section-header"><h2 class="section-title">Vision stratégique</h2></div>
+            <div class="strategy-grid">
+              <div class="strategy-card"><h3>Mission</h3><p id="mission">Faciliter la connexion entre producteurs agricoles et distributeurs pour optimiser la chaîne de valeur agricole et promouvoir une agriculture durable et certifiée.</p></div>
+              <div class="strategy-card"><h3>Vision</h3><p id="vision">Devenir la référence AgriTech au Maghreb, avec une plateforme multilingue et des partenariats stratégiques avec les grandes surfaces.</p></div>
+              <div class="strategy-card"><h3>Signature</h3><p id="signature-strategique">Offrir une interface simple avec une transparence des prix et un support réactif, tout en intégrant des outils numériques avancés pour la traçabilité et la gestion des stocks.</p></div>
+              <div class="strategy-card full"><h3>Objectifs stratégiques</h3><div id="objectifs">1. Digitaliser entièrement la chaîne de commande à livraison. 2. Intégrer un système de paiement sécurisé. 3. Automatiser les relances clients et partenaires. 4. Créer un dashboard analytique pour les producteurs.</div></div>
+            </div>
+          </section>
+
+          <section class="section">
+            <div class="section-header"><h2 class="section-title">Analyse SWOT</h2></div>
+            <div class="swot-grid">
+              <div class="swot-card"><h3>Forces</h3><p id="forces">Interface utilisateur simple, support client réactif, partenariats stratégiques solides avec Maroc PME et Crédit Agricole du Maroc.</p></div>
+              <div class="swot-card"><h3>Faiblesses</h3><p id="faiblesses">Dépendance aux outils manuels, absence de CRM, manque de ressources humaines spécialisées en technologie.</p></div>
+              <div class="swot-card"><h3>Opportunités</h3><p id="opportunites">Expansion du marché AgriTech au Maghreb, intérêt croissant pour les certifications bio et les solutions logistiques spécialisées.</p></div>
+              <div class="swot-card"><h3>Menaces</h3><p id="menaces">Connexion Internet instable en zone rurale, résistance au changement numérique chez certains partenaires.</p></div>
+            </div>
+          </section>
+
+          <section class="section">
+            <div class="section-header"><h2 class="section-title">Plan d'action</h2></div>
+            <div class="recommendations"><div id="recommendations-list">1. Prioriser l'intégration d'un système de paiement sécurisé. 2. Automatiser la saisie de commandes et le suivi des livraisons. 3. Développer une interopérabilité entre les outils numériques existants.</div></div>
+          </section>
+
+          <section class="section">
+            <div class="section-header"><h2 class="section-title">Profils clients</h2></div>
+            <div id="personas-grid" class="personas-grid">
+    <div class="persona-card">
+      <div class="persona-header">
+        <div class="persona-avatar"><i class="fas fa-user"></i></div>
+        <div class="persona-name">Ahmed El Mansouri</div>
+        <div class="persona-role">Directeur de coopérative</div>
+      </div>
+      <div class="persona-body">
+        <div class="persona-info">
+          <div class="info-item"><div class="info-label">Secteur</div><div class="info-value">Agriculture</div></div>
+          <div class="info-item"><div class="info-label">Entreprise</div><div class="info-value">Coopérative Al Falah</div></div>
+          <div class="info-item"><div class="info-label">CA</div><div class="info-value">500,000 MAD</div></div>
+          <div class="info-item"><div class="info-label">Taille</div><div class="info-value">15 employés</div></div>
+        </div>
+        <div class="persona-section">
+          <div class="section-title"><i class="fas fa-bullseye"></i> Objectifs</div>
+          <div class="section-content">Optimiser la logistique et obtenir des certifications bio.</div>
+        </div>
+        <div class="persona-section">
+          <div class="section-title"><i class="fas fa-bug"></i> Douleurs</div>
+          <div class="section-content">Difficultés à gérer les approvisionnements et à accéder à des marchés plus larges.</div>
+        </div>
+        <div class="persona-section">
+          <div class="section-title"><i class="fas fa-rocket"></i> Besoins</div>
+          <div class="section-content">Gestion efficace des stocks et visibilité accrue.</div>
+        </div>
+        <div class="persona-section">
+          <div class="section-title"><i class="fas fa-network-wired"></i> Comportements</div>
+          <div class="section-content">Utilise principalement WhatsApp et Facebook pour la communication et la découverte de nouveaux produits.</div>
+        </div>
+      </div>
+    </div>
+  
+    <div class="persona-card">
+      <div class="persona-header">
+        <div class="persona-avatar"><i class="fas fa-user"></i></div>
+        <div class="persona-name">Sofia Benali</div>
+        <div class="persona-role">Responsable Achats</div>
+      </div>
+      <div class="persona-body">
+        <div class="persona-info">
+          <div class="info-item"><div class="info-label">Secteur</div><div class="info-value">Distribution</div></div>
+          <div class="info-item"><div class="info-label">Entreprise</div><div class="info-value">Distribution Maghreb</div></div>
+          <div class="info-item"><div class="info-label">CA</div><div class="info-value">2 millions MAD</div></div>
+          <div class="info-item"><div class="info-label">Taille</div><div class="info-value">50 employés</div></div>
+        </div>
+        <div class="persona-section">
+          <div class="section-title"><i class="fas fa-bullseye"></i> Objectifs</div>
+          <div class="section-content">Nouer des partenariats stables avec des producteurs certifiés.</div>
+        </div>
+        <div class="persona-section">
+          <div class="section-title"><i class="fas fa-bug"></i> Douleurs</div>
+          <div class="section-content">Manque de transparence dans les prix et difficultés logistiques.</div>
+        </div>
+        <div class="persona-section">
+          <div class="section-title"><i class="fas fa-rocket"></i> Besoins</div>
+          <div class="section-content">Trouver des producteurs fiables et assurer une traçabilité des produits.</div>
+        </div>
+        <div class="persona-section">
+          <div class="section-title"><i class="fas fa-network-wired"></i> Comportements</div>
+          <div class="section-content">S'informe via LinkedIn et participe à des salons professionnels.</div>
+        </div>
+      </div>
+    </div>
+  </div>
+          </section>
+
+          <section class="section">
+            <div class="section-header"><h2 class="section-title">Analyse Web Client</h2></div>
+            <div class="web-analysis-grid">
+              <div class="web-analysis-card"><h3>Performance du Site</h3><p id="web-performance">68%</p></div>
+              <div class="web-analysis-card"><h3> SEO</h3><p id="web-seo">75%</p></div>
+              <div class="web-analysis-card"><h3>Expérience UX</h3><p id="web-ux">La navigation est intuitive mais pourrait bénéficier d'une optimisation pour le mobile. Le design est fonctionnel, mais manque d'éléments interactifs.</p></div>
+            </div>
+          </section>
+
+          <section class="section">
+            <div class="section-header"><h2 class="section-title">Conclusion stratégique</h2></div>
+            <div class="conclusion-container">
+              <div class="conclusion-card">
+                <div class="conclusion-content">
+                  <h3>Synthèse</h3>
+                  <p id="conclusion-text">Pour maintenir sa croissance, Agrolia doit accélérer sa transformation numérique en automatisant ses processus clés et en renforçant ses capacités technologiques. L'accompagnement des partenaires et une stratégie de communication efficace seront essentiels pour atteindre ses objectifs.</p>
+                </div>
+              </div>
+            </div>
+          </section>
+        </div>
+      </main>
+
+       <footer class="footer">
+            <div class="container">
+                <div class="footer-content">
+                    <div class="footer-left">
+                        <span class="footer-copyright">
+                            &copy; 2025 wlw. Tous droits réservés.
+                        </span>
+                    </div>
+                    <div class="footer-right">
+                        <span class="footer-report-date" id="footer-date"></span>
+                    </div>
+                </div>
+            </div>
+        </footer>
+    </div>
+  </div>
+     </div>
+       <button class="gjs-custom-btn" onclick="sendToN8N()">💾 Enregistrer</button>
+  </div>
+<script src="https://unpkg.com/grapesjs"></script>
+<script>
+  const editor = grapesjs.init({
+    container: '#gjs',
+    fromElement: true,
+    storageManager: false,
+    height: '100%',
+    plugins: [],
+    pluginsOpts: {},
+    canvas: {
+      styles: [
+        'https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css',
+        'https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap'
+      ]
+    }
+  });
+
+  editor.on('load', () => {
+    const iframe = editor.Canvas.getFrameEl(); 
+    const styles = document.querySelectorAll('style'); 
+
+    styles.forEach(styleTag => {
+      const clonedStyle = styleTag.cloneNode(true); 
+      iframe.contentDocument.head.appendChild(clonedStyle); 
+    });
+  });
+  function sendToN8N() {
+  const html = editor.getHtml();
+  const iframeDoc = editor.Canvas.getFrameEl().contentDocument;
+
+  // 1. Lire tous les <style> dans l'iframe (canvas)
+  const iframeStyles = Array.from(iframeDoc.querySelectorAll("style"))
+    .map(style => style.innerHTML)
+    .join("\n");
+
+  // 2. Optionnel : ajouter aussi les styles du document principal
+  const mainStyles = Array.from(document.querySelectorAll("style"))
+    .map(style => style.innerHTML)
+    .join("\n");
+
+  // 3. CSS final : animations incluses
+  const css = iframeStyles + "\n" + mainStyles;
+
+    fetch("https://n8n.srv787725.hstgr.cloud/webhook/html-save", {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify({
+        html,
+        css,
+        client: "Leila",
+        entreprise: "Agrolia",
+        fileName: "Agrolia_plan.html"
+      })
+    })
+    .then(res => res.ok
+      ? alert("✅ Modifications enregistrées avec succès !")
+      : alert("❌ Erreur lors de l’enregistrement !"))
+    .catch(err => alert("❌ Erreur de connexion : " + err.message));
+  }
+</script>
+
+</body>
+</html>
